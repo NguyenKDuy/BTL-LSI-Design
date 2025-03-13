@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date         : Thu Mar 13 14:30:52 2025
+| Date         : Thu Mar 13 14:55:01 2025
 | Host         : DESKTOP-FEGLDB1 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Memory_control_sets_placed.rpt
 | Design       : Memory
@@ -76,37 +76,37 @@ Table of Contents
 |  clk_IBUF_BUFG | instr_address[4]_i_1_n_0 | rst_IBUF         |                1 |              5 |         5.00 |
 |  clk_IBUF_BUFG | enable_IBUF              | rst_IBUF         |                4 |              8 |         2.00 |
 |  clk_IBUF_BUFG | mem[0][7]_i_1_n_0        | rst_IBUF         |                2 |              8 |         4.00 |
-|  clk_IBUF_BUFG | mem[10][7]_i_1_n_0       | rst_IBUF         |                3 |              8 |         2.67 |
-|  clk_IBUF_BUFG | mem[11][7]_i_1_n_0       | rst_IBUF         |                1 |              8 |         8.00 |
-|  clk_IBUF_BUFG | mem[12][7]_i_1_n_0       | rst_IBUF         |                1 |              8 |         8.00 |
-|  clk_IBUF_BUFG | mem[28][7]_i_1_n_0       | rst_IBUF         |                3 |              8 |         2.67 |
-|  clk_IBUF_BUFG | mem[8][7]_i_1_n_0        | rst_IBUF         |                2 |              8 |         4.00 |
-|  clk_IBUF_BUFG | mem[9][7]_i_1_n_0        | rst_IBUF         |                8 |              8 |         1.00 |
-|  clk_IBUF_BUFG | mem[1][7]_i_1_n_0        | rst_IBUF         |                1 |              8 |         8.00 |
-|  clk_IBUF_BUFG | mem[17][7]_i_1_n_0       | rst_IBUF         |                5 |              8 |         1.60 |
-|  clk_IBUF_BUFG | mem[27][7]_i_1_n_0       | rst_IBUF         |                1 |              8 |         8.00 |
 |  clk_IBUF_BUFG | mem[18][7]_i_1_n_0       | rst_IBUF         |                1 |              8 |         8.00 |
-|  clk_IBUF_BUFG | mem[14][7]_i_1_n_0       | rst_IBUF         |                2 |              8 |         4.00 |
-|  clk_IBUF_BUFG | mem[19][7]_i_1_n_0       | rst_IBUF         |                2 |              8 |         4.00 |
-|  clk_IBUF_BUFG | mem[22][7]_i_1_n_0       | rst_IBUF         |                2 |              8 |         4.00 |
-|  clk_IBUF_BUFG | mem[15][7]_i_1_n_0       | rst_IBUF         |                3 |              8 |         2.67 |
-|  clk_IBUF_BUFG | mem[6][7]_i_1_n_0        | rst_IBUF         |                2 |              8 |         4.00 |
-|  clk_IBUF_BUFG | mem[30][7]_i_1_n_0       | rst_IBUF         |                4 |              8 |         2.00 |
-|  clk_IBUF_BUFG | mem[2][7]_i_1_n_0        | rst_IBUF         |                3 |              8 |         2.67 |
-|  clk_IBUF_BUFG | mem[5][7]_i_1_n_0        | rst_IBUF         |                2 |              8 |         4.00 |
-|  clk_IBUF_BUFG | mem[25][7]_i_1_n_0       |                  |                1 |              8 |         8.00 |
-|  clk_IBUF_BUFG | mem[21][7]_i_1_n_0       | rst_IBUF         |                2 |              8 |         4.00 |
-|  clk_IBUF_BUFG | mem[23][7]_i_1_n_0       | rst_IBUF         |                3 |              8 |         2.67 |
-|  clk_IBUF_BUFG | mem[31][7]_i_1_n_0       | rst_IBUF         |                7 |              8 |         1.14 |
-|  clk_IBUF_BUFG | mem[3][7]_i_1_n_0        | rst_IBUF         |                3 |              8 |         2.67 |
-|  clk_IBUF_BUFG | mem[20][7]_i_1_n_0       | rst_IBUF         |                1 |              8 |         8.00 |
 |  clk_IBUF_BUFG | mem[13][7]_i_1_n_0       | rst_IBUF         |                1 |              8 |         8.00 |
 |  clk_IBUF_BUFG | mem[16][7]_i_1_n_0       | rst_IBUF         |                1 |              8 |         8.00 |
-|  clk_IBUF_BUFG | mem[4][7]_i_1_n_0        | rst_IBUF         |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | mem[11][7]_i_1_n_0       | rst_IBUF         |                1 |              8 |         8.00 |
+|  clk_IBUF_BUFG | mem[6][7]_i_1_n_0        | rst_IBUF         |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | mem[2][7]_i_1_n_0        | rst_IBUF         |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | mem[27][7]_i_1_n_0       | rst_IBUF         |                1 |              8 |         8.00 |
+|  clk_IBUF_BUFG | mem[8][7]_i_1_n_0        | rst_IBUF         |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | mem[17][7]_i_1_n_0       | rst_IBUF         |                5 |              8 |         1.60 |
 |  clk_IBUF_BUFG | mem[7][7]_i_1_n_0        | rst_IBUF         |                2 |              8 |         4.00 |
-|  clk_IBUF_BUFG | mem[24][7]_i_1_n_0       | rst_IBUF         |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | mem[14][7]_i_1_n_0       | rst_IBUF         |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | mem[9][7]_i_1_n_0        | rst_IBUF         |                8 |              8 |         1.00 |
+|  clk_IBUF_BUFG | mem[10][7]_i_1_n_0       | rst_IBUF         |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | mem[15][7]_i_1_n_0       | rst_IBUF         |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | mem[25][7]_i_1_n_0       |                  |                1 |              8 |         8.00 |
+|  clk_IBUF_BUFG | mem[30][7]_i_1_n_0       | rst_IBUF         |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | mem[22][7]_i_1_n_0       | rst_IBUF         |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | mem[12][7]_i_1_n_0       | rst_IBUF         |                1 |              8 |         8.00 |
+|  clk_IBUF_BUFG | mem[28][7]_i_1_n_0       | rst_IBUF         |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | mem[1][7]_i_1_n_0        | rst_IBUF         |                1 |              8 |         8.00 |
+|  clk_IBUF_BUFG | mem[23][7]_i_1_n_0       | rst_IBUF         |                3 |              8 |         2.67 |
 |  clk_IBUF_BUFG | mem[26][7]_i_1_n_0       | rst_IBUF         |                1 |              8 |         8.00 |
+|  clk_IBUF_BUFG | mem[24][7]_i_1_n_0       | rst_IBUF         |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | mem[3][7]_i_1_n_0        | rst_IBUF         |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | mem[5][7]_i_1_n_0        | rst_IBUF         |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | mem[21][7]_i_1_n_0       | rst_IBUF         |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | mem[31][7]_i_1_n_0       | rst_IBUF         |                7 |              8 |         1.14 |
 |  clk_IBUF_BUFG | mem[29][7]_i_1_n_0       |                  |                1 |              8 |         8.00 |
+|  clk_IBUF_BUFG | mem[20][7]_i_1_n_0       | rst_IBUF         |                1 |              8 |         8.00 |
+|  clk_IBUF_BUFG | mem[19][7]_i_1_n_0       | rst_IBUF         |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | mem[4][7]_i_1_n_0        | rst_IBUF         |                3 |              8 |         2.67 |
 +----------------+--------------------------+------------------+------------------+----------------+--------------+
 
 
