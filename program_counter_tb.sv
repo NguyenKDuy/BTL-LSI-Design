@@ -13,7 +13,7 @@
 // 
 // Dependencies: 
 // 
-// Revision:
+// Revision:0.02 - Synchronous CLOCK
 // Revision 0.01 - File Created
 // Additional Comments:
 // 
@@ -44,13 +44,21 @@ module program_counter_tb;
 
     // Test scenarios
     initial begin  
-        $monitor("Time = %0t | rst = %b | clk = %b | sel = %b | ld = %b | inc = %b | jmp = %d | out = %d", 
+        $monitor("Time = %0t | rst = %b | clk = %b | sel = %b | ld = %b | inc = %b | jmp = %b | out = %b", 
                   $time, rst, clk, sel, ld, inc, jmp, out);
+
         
-        // Reset hệ thống
-        rst = 1;  
-        #20;  
-        rst = 0;  
+        // inc and sel change output data
+        for (int i = 0; i < 31; i = i + 1) begin
+            inc = 1;  // Kích hoạt tín hiệu inc
+            #10;      // Chờ trong 10 đơn vị thời gian
+            inc = 0;  // Tắt tín hiệu inc
+            #5;      // Chờ thêm 10 đơn vị thời gian
+            sel = 1;  // Kích hoạt tín hiệu inc
+            #10;      // Chờ trong 10 đơn vị thời gian
+            sel = 0;  // Tắt tín hiệu inc
+            #5;      // Chờ thêm 10 đơn vị thời gian
+        end
         
         sel = 1;
         #10;
@@ -58,24 +66,42 @@ module program_counter_tb;
 
         // Kiểm tra tăng giá trị (inc)
         inc = 1;
-        #20;
+        #10;
         inc = 0;
         
+        // Kiểm tra reset
+        rst =1;
+        #5;
+        sel = 0;
+        rst = 0;
         sel = 1;
         #10;
         sel = 0;
         
         // Kiểm tra load giá trị nhảy
         ld = 1;
-        jmp = 5'b10101; // Giá trị jump
+        jmp = 5'b11111;// Giá trị jump 1f
         #20;
         ld = 0;
-        
-        sel = 1;
-        #10;
+        rst =1;
+        #5;
         sel = 0;
+        rst =0;
+        // Kiểm tra load giá trị nhảy nếu không có load
+        jmp = 5'b00111;// Giá trị jump 1f
+        sel = 1;
+        #5;
+        sel = 0;
+        #5;
+         // Kiểm tra load giá trị nhảy nếu load = 1 nhưng sel = 0
+        ld=1 ;
+        #5;
+        //
+        sel = 1; //Chọn giá trị vừa jump đến = 7
         
-        #100;  
+       
+        
+        #50;  
         $finish;  
     end  
 endmodule  
