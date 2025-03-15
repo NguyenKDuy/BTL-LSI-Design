@@ -91,7 +91,7 @@ module tb_alu_accumulator;
 
     
     initial begin
-        $monitor("Time=%0t | rst=%b | ld_ac=%b | inA=%b (%0d) | inB=%b (%0d) | Opcode=%b | ALU_Out=%b (%0d) | Accumulator=%b (%0d) | Zero_Flag=%b",
+        $monitor("Time=%0t | rst=%b | ld_ac=%b | inA=%b (%0d) | inB=%b (%0d) | Opcode=%b | ALU_Out=%b (%0d) | Accumulator=%b (%0d) | is_zero=%b",
                  $time, rst, ld_ac, inA, inA, inB, inB, opcode, alu_result, alu_result, acc_out, acc_out, is_zero);
     end
 endmodule

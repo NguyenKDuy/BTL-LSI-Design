@@ -48,7 +48,7 @@ module tb_accumulator;
 
         // Test 2: load new value to Accumulator
         data_in = 8'b10101010; ld_ac = 1;
-        #10 ld_ac = 0; // Giữ nguyên
+        #10 ld_ac = 0;
 
         // Test 3: check if load = 0
         #10;

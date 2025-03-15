@@ -30,7 +30,7 @@ module accumulator (
     output reg [7:0] data_out
 );
 
-always @(posedge clk or posedge rst) begin
+always @(posedge clk) begin
     if (rst)
         data_out <= 8'b00000000;
     else if (ld_ac)
