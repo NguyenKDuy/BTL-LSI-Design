@@ -1,0 +1,142 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Thu Mar 20 13:35:45 2025
+# Process ID         : 15700
+# Current directory  : C:/Users/Dell/METNHATROI/Memory
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent20220 C:\Users\Dell\METNHATROI\Memory\Memory.xpr
+# Log file           : C:/Users/Dell/METNHATROI/Memory/vivado.log
+# Journal file       : C:/Users/Dell/METNHATROI/Memory\vivado.jou
+# Running On         : DESKTOP-FEGLDB1
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 22631
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i7-13650HX
+# CPU Frequency      : 2803 MHz
+# CPU Physical cores : 14
+# CPU Logical cores  : 20
+# Host memory        : 16849 MB
+# Swap memory        : 6442 MB
+# Total Virtual      : 23291 MB
+# Available Virtual  : 7810 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Dell/METNHATROI/Memory/Memory.xpr
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/Dell/METNHATROI/Memory/Memory.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Vivado/2024.2/data/ip'.
+open_project: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1166.695 ; gain = 80.148
+update_compile_order -fileset sources_1
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file C:/Users/Dell/METNHATROI/Memory/Memory.srcs/utils_1/imports/synth_1/Memory.dcp with file C:/Users/Dell/METNHATROI/Memory/Memory.runs/synth_1/Memory.dcp
+launch_runs synth_1 -jobs 20
+[Thu Mar 20 13:36:12 2025] Launched synth_1...
+Run output will be captured here: C:/Users/Dell/METNHATROI/Memory/Memory.runs/synth_1/runme.log
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file C:/Users/Dell/METNHATROI/Memory/Memory.srcs/utils_1/imports/synth_1/Memory.dcp with file C:/Users/Dell/METNHATROI/Memory/Memory.runs/synth_1/Memory.dcp
+launch_runs synth_1 -jobs 20
+[Thu Mar 20 13:37:02 2025] Launched synth_1...
+Run output will be captured here: C:/Users/Dell/METNHATROI/Memory/Memory.runs/synth_1/runme.log
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Dell\METNHATROI\Memory\Memory.srcs\sources_1\new\Memory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Dell\METNHATROI\Memory\Memory.srcs\sim_1\new\tb_Memory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Dell\METNHATROI\Memory\Memory.srcs\sim_1\new\tb_Memory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Dell\METNHATROI\Memory\Memory.srcs\sim_1\new\tb_Memory.sv:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Dell\METNHATROI\Memory\Memory.srcs\sources_1\new\Memory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Dell\METNHATROI\Memory\Memory.srcs\sim_1\new\tb_Memory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Dell\METNHATROI\Memory\Memory.srcs\sim_1\new\tb_Memory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Dell\METNHATROI\Memory\Memory.srcs\sim_1\new\tb_Memory.sv:]
+ERROR: [Common 17-180] Spawn failed: No error
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file C:/Users/Dell/METNHATROI/Memory/Memory.srcs/utils_1/imports/synth_1/Memory.dcp with file C:/Users/Dell/METNHATROI/Memory/Memory.runs/synth_1/memory_5x8.dcp
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Dell\METNHATROI\Memory\Memory.srcs\sources_1\new\Memory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Dell\METNHATROI\Memory\Memory.srcs\sim_1\new\tb_Memory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Dell\METNHATROI\Memory\Memory.srcs\sim_1\new\tb_Memory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Dell\METNHATROI\Memory\Memory.srcs\sim_1\new\tb_Memory.sv:]
+launch_runs synth_1 -jobs 20
+[Thu Mar 20 13:37:47 2025] Launched synth_1...
+Run output will be captured here: C:/Users/Dell/METNHATROI/Memory/Memory.runs/synth_1/runme.log
+ERROR: [Common 17-180] Spawn failed: No error
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_memory_5x8'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Dell/METNHATROI/Memory/Memory.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'E:/Vivado/2024.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_memory_5x8' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Dell/METNHATROI/Memory/Memory.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj tb_memory_5x8_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Dell/METNHATROI/Memory/Memory.srcs/sources_1/new/Memory.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module memory_5x8
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Dell/METNHATROI/Memory/Memory.srcs/sim_1/new/tb_Memory.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_memory_5x8
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Dell/METNHATROI/Memory/Memory.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Dell/METNHATROI/Memory/Memory.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_memory_5x8_behav xil_defaultlib.tb_memory_5x8 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: E:/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_memory_5x8_behav xil_defaultlib.tb_memory_5x8 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.memory_5x8
+Compiling module xil_defaultlib.tb_memory_5x8
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_memory_5x8_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Dell/METNHATROI/Memory/Memory.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_memory_5x8_behav -key {Behavioral:sim_1:Functional:tb_memory_5x8} -tclbatch {tb_memory_5x8.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_memory_5x8.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Time=0 | rst=1 sel=0 rd=0 wr=0 ld_ir=0 address=00000 | data_e=zz data_out=xx
+Time=5000 | rst=1 sel=0 rd=0 wr=0 ld_ir=0 address=00000 | data_e=zz data_out=00
+Time=12000 | rst=0 sel=0 rd=0 wr=0 ld_ir=0 address=00000 | data_e=zz data_out=00
+Time=22000 | rst=0 sel=1 rd=0 wr=1 ld_ir=0 address=00101 | data_e=a5 data_out=00
+Time=32000 | rst=0 sel=1 rd=0 wr=0 ld_ir=0 address=00101 | data_e=zz data_out=00
+Time=42000 | rst=0 sel=0 rd=1 wr=0 ld_ir=0 address=00101 | data_e=zz data_out=00
+Time=45000 | rst=0 sel=0 rd=1 wr=0 ld_ir=0 address=00101 | data_e=zz data_out=a5
+Time=52000 | rst=0 sel=1 rd=1 wr=0 ld_ir=0 address=00101 | data_e=a5 data_out=a5
+Time=62000 | rst=0 sel=1 rd=1 wr=0 ld_ir=1 address=00101 | data_e=a5 data_out=a5
+Time=72000 | rst=0 sel=0 rd=0 wr=0 ld_ir=0 address=00101 | data_e=zz data_out=a5
+Time=82000 | rst=0 sel=1 rd=0 wr=1 ld_ir=0 address=01010 | data_e=5a data_out=a5
+Time=92000 | rst=0 sel=1 rd=0 wr=0 ld_ir=0 address=01010 | data_e=zz data_out=a5
+Time=102000 | rst=0 sel=0 rd=1 wr=0 ld_ir=0 address=01010 | data_e=zz data_out=a5
+Time=105000 | rst=0 sel=0 rd=1 wr=0 ld_ir=0 address=01010 | data_e=zz data_out=5a
+$finish called at time : 112 ns : File "C:/Users/Dell/METNHATROI/Memory/Memory.srcs/sim_1/new/tb_Memory.sv" Line 136
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_memory_5x8_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 1302.457 ; gain = 0.000
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Dell\METNHATROI\Memory\Memory.srcs\sources_1\new\Memory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Dell\METNHATROI\Memory\Memory.srcs\sim_1\new\tb_Memory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Dell\METNHATROI\Memory\Memory.srcs\sources_1\new\Memory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Dell\METNHATROI\Memory\Memory.srcs\sources_1\new\Memory.sv:]
+ERROR: [Common 17-180] Spawn failed: No error
