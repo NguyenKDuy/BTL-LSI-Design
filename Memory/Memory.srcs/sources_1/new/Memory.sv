@@ -23,7 +23,7 @@
 module memory_5x8 #(
     parameter DATA_WIDTH = 8,                  // Độ rộng dữ liệu
     parameter ADDR_WIDTH = 5,                  // Độ rộng địa chỉ (cho 2^5 = 32 ô)
-    parameter MEM_DEPTH  = (1 << ADDR_WIDTH)    // Số lượng ô bộ nhớ
+    parameter MEM_DEPTH  = (1 << ADDR_WIDTH)    // Số lượng ô bộ nhớ (32)
 )(
     input                        clk,         // Clock
     input                        rst,         // Reset (đồng bộ)

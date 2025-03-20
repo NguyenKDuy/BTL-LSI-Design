@@ -38,7 +38,7 @@
     wire [7:0]  data_e;      // Bus 2 chiều
     wire [7:0]  data_out;    // Đầu ra từ bộ nhớ (có thể là lệnh hoặc dữ liệu)
 
-    // Kết nối tới module memory_5x8 (đảm bảo module đã được biên dịch với tham số mặc định)
+    // Kết nối tới module memory_5x8 
     memory_5x8 uut (
         .clk      (clk),
         .rst      (rst),
