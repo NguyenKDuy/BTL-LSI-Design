@@ -23,70 +23,51 @@
 module memory_5x8 (
     input             clk,       // Clock
     input             rst,       // Reset 
-    input             sel,       // Tín hiệu chọn 
+    input             sel,       // Tín hiệu chọn bộ nhớ
     input             rd,        // 1 = cho phép đọc
     input             wr,        // 1 = cho phép ghi
-    input             ld_ir,     // 1 = cho phép nạp IR 
+    input             ld_ir,     // 1 = cho phép nạp IR (data_out)
     inout      [7:0]  data_e,    // Bus dữ liệu 2 chiều
-    input      [4:0]  address,   // Địa chỉ 5 bit
+    input      [4:0]  address,   // Địa chỉ 5 bit (0..31)
 
     output reg [7:0]  data_out   // Dữ liệu đầu ra (có thể là lệnh hoặc dữ liệu)
 );
 
-    // Mảng nhớ 32 ô, mỗi ô 8 bit
-    reg [7:0] mem_array [0:31];
+    // Mảng bộ nhớ 32 ô, mỗi ô 8 bit
+    reg [7:0] mem [0:31];
 
-    // Thanh ghi IR 
-    reg [7:0] IR;
+    // Thanh ghi tạm để giữ dữ liệu đọc ra từ bộ nhớ
+    reg [7:0] read_data_reg;
 
-    // Thanh ghi lưu địa chỉ trung gian 
-    reg [4:0] address_reg;
-
-    integer i;
-
-    // Bus dữ liệu hai chiều: chỉ xuất dữ liệu ra khi sel=1 và rd=1 (không ghi)
-    assign data_e = (sel && rd && !wr) ? data_out : 8'hZZ;
-
-    always @(posedge clk) begin
+    // Khối đồng bộ (đọc/ghi)
+    always @(posedge clk or posedge rst) begin
         if (rst) begin
-            // Đưa tất cả về 0
-            data_out    <= 8'd0;
-            IR          <= 8'd0;
-            address_reg <= 5'd0;
-            for (i = 0; i < 32; i = i + 1) begin
-                mem_array[i] <= 8'd0;
+            // Reset
+            read_data_reg <= 8'b0;
+            data_out      <= 8'b0;
+        end
+        else if (sel) begin
+            // Chỉ thực hiện nếu sel=1 (bộ nhớ được chọn)
+            if (wr && !rd) begin
+                // Ghi dữ liệu từ bus vào bộ nhớ
+                mem[address] <= data_e;
             end
-        end 
-        else begin
-            // Xử lý ghi nếu cần (sel=1, wr=1, rd=0)
-            if (sel && wr && !rd) begin
-                mem_array[address] <= data_e;
-            end
-
-            // Xử lý đọc theo tổ hợp {sel, rd, ld_ir}
-            case ({sel, rd, ld_ir})
-                3'b110: begin // = 'd6
-                    // Đưa address vào thanh ghi
-                    address_reg <= address;
-                end
-
-                3'b111: begin // = 'd7
-                    // Dùng địa chỉ lưu ở thanh ghi truy xuất lệnh/data -> data_out
-                    data_out <= mem_array[address_reg];
+            else if (rd && !wr) begin
+                // Đọc dữ liệu từ bộ nhớ
+                read_data_reg <= mem[address];
                 
-                    IR <= mem_array[address_reg];
+                // Nếu cần nạp vào IR (hoặc thanh ghi lệnh) thì cập nhật data_out
+                if (ld_ir) begin
+                    data_out <= mem[address];
                 end
-
-                3'b010: begin // = 'd2
-                    // Dùng địa chỉ từ address truy xuất thẳng data mem
-                    data_out <= mem_array[address];
-                end
-
-                default: begin
-                    // Không làm gì 
-                end
-            endcase
+            end
+            // Nếu rd=wr=0 hoặc rd=wr=1 thì không làm gì (có thể bổ sung xử lý nếu muốn)
         end
     end
+
+    // Mạch ba trạng thái cho bus data_e:
+    // - Khi đang đọc (rd=1, wr=0, sel=1), đưa dữ liệu ra bus
+    // - Ngược lại, để bus ở trạng thái trở kháng cao
+    assign data_e = (sel && rd && !wr) ? read_data_reg : 8'bz;
 
 endmodule

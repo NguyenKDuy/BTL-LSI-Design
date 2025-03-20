@@ -3,3 +3,8 @@
     <Process Command="vivado.bat" Owner="Dell" Host="DESKTOP-FEGLDB1" Pid="1892" HostCore="20" HostMemory="016849256448">
     </Process>
 </ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="Dell" Host="DESKTOP-FEGLDB1" Pid="22760" HostCore="20" HostMemory="016849256448">
+    </Process>
+</ProcessHandle>
