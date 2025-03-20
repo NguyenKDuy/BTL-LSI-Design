@@ -20,105 +20,126 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module tb_Memory;
-  // Định nghĩa tham số
-    parameter DATA_WIDTH = 8;
-    parameter ADDR_WIDTH = 5;
+module tb_memory_5x8;
 
-    // Định nghĩa tín hiệu cho module
-    reg clk;
-    reg rst;
-    reg enable;
-    reg read_write;              // 0: ghi, 1: đọc
-    reg load_instruction_flag;
-    reg [ADDR_WIDTH-1:0] address;
+    // Khai báo các tín hiệu điều khiển
+    reg         clk;
+    reg         rst;
+    reg         sel;
+    reg         rd;
+    reg         wr;
+    reg         ld_ir;
+    reg  [4:0]  address;
+    wire [7:0]  data_out;
 
-    // Testbench sẽ điều khiển cổng bidirectional khi ở chế độ ghi.
-    // Khi không ghi, testbench đặt giá trị high-impedance.
-    reg drive_data;              // Khi drive_data = 1, testbench sẽ điều khiển dữ liệu
-    reg [DATA_WIDTH-1:0] tb_data;
-    wire [DATA_WIDTH-1:0] data;
-    
-    // Tri-state driver từ testbench:
-    assign data = (drive_data) ? tb_data : {DATA_WIDTH{1'bz}};
-    
-    // Xuất ra chỉ số lệnh (instr_address) từ module
-    wire [ADDR_WIDTH-1:0] instr_address;
-    
-    // Instantiate module memory
-    Memory #(
-        .DATA_WIDTH(DATA_WIDTH),
-        .ADDR_WIDTH(ADDR_WIDTH)
-    ) uut (
-        .data(data),
-        .instr_address(instr_address),
+    // Khai báo tín hiệu cho bus dữ liệu 2 chiều
+    // Khi tb_drive_en = 1, testbench sẽ điều khiển data_e bằng tb_drive_data
+    reg         tb_drive_en;
+    reg  [7:0]  tb_drive_data;
+    wire [7:0]  data_e;
+    assign data_e = tb_drive_en ? tb_drive_data : 8'hZZ;
+
+    // Khai báo instance của module memory_5x8
+    memory_5x8 dut (
         .clk(clk),
         .rst(rst),
-        .enable(enable),
-        .read_write(read_write),
-        .load_instruction_flag(load_instruction_flag),
-        .address(address)
+        .sel(sel),
+        .rd(rd),
+        .wr(wr),
+        .ld_ir(ld_ir),
+        .data_e(data_e),
+        .address(address),
+        .data_out(data_out)
     );
-    
-    // Sinh xung clock: chu kỳ 10ns (5ns HIGH, 5ns LOW)
+
+    // Sinh tín hiệu clock: chu kỳ 10ns (tạo cạnh lên/xuống sau 5ns)
     initial begin
         clk = 0;
         forever #5 clk = ~clk;
     end
 
-    // Phần test: khởi tạo và điều khiển các tín hiệu
+    // Đoạn mô phỏng (stimulus)
     initial begin
-        // Khởi tạo các tín hiệu
+        // Khởi tạo ban đầu
         rst = 1;
-        enable = 0;
-        read_write = 0;         // Mặc định ở chế độ ghi
-        load_instruction_flag = 0;
-        address = 0;
-        drive_data = 0;         // Ban đầu không drive dữ liệu
-        tb_data = 0;
+        sel = 0;
+        rd  = 0;
+        wr  = 0;
+        ld_ir = 0;
+        address = 5'd0;
+        tb_drive_data = 8'd0;
+        tb_drive_en   = 0;
         
-        // Giữ reset trong vài chu kỳ rồi giải phóng
-        #20;
+        // Đợi một vài chu kỳ clock để reset có hiệu lực
+        #12;  
         rst = 0;
-        enable = 1;
-        
-        // --- Thao tác ghi ---
-        // Ghi giá trị 0x55 vào địa chỉ 5
-        #10;
-        read_write = 0;         // Chuyển sang chế độ ghi
-        drive_data = 1;         // Testbench bắt đầu drive dữ liệu
-        address = 5;
-        tb_data = 8'h55;        // Ghi 0x55
-        load_instruction_flag = 1; // Kiểm tra việc tăng instr_address nếu cần
-        #10;                   // Đợi một chu kỳ clock
-        
-        // Dừng drive dữ liệu sau khi ghi
-        drive_data = 0;
-        load_instruction_flag = 0;
-        
-        // --- Thao tác đọc ---
-        // Đọc tại địa chỉ 5, kết quả mong đợi là 0x55
-        #10;
-        read_write = 1;         // Chuyển sang chế độ đọc
-        address = 5;
-        // Testbench không drive dữ liệu khi đang đọc
-        drive_data = 0;
         #10;
         
-        // Đọc thêm một giá trị từ địa chỉ 0 (nội dung đã được khởi tạo trong reset)
-        #10;
-        address = 0;
+        // --- Ghi dữ liệu ---
+        // Ghi giá trị 8'hA5 vào địa chỉ 5'b00101
+        address = 5'b00101;
+        sel = 1;
+        wr  = 1;
+        rd  = 0;   // Đảm bảo không có hoạt động đọc
+        tb_drive_data = 8'hA5;
+        tb_drive_en = 1; // Kích hoạt driver trên bus data_e
+        #10;  // Đợi đến cạnh clock tiếp theo
+        tb_drive_en = 0;  // Tắt driver sau khi ghi
+        wr = 0;
         #10;
         
-        // Kết thúc mô phỏng sau một khoảng thời gian
-        #50;
+        // --- Đọc trực tiếp (case 3'b010: sel=0, rd=1, ld_ir=0) ---
+        address = 5'b00101;
+        sel = 0;
+        rd  = 1;
+        ld_ir = 0;
+        #10;  // Đợi một chu kỳ clock để dữ liệu được cập nhật
+        
+        // --- Đọc qua thanh ghi địa chỉ trung gian ---
+        // Bước 1: Lưu địa chỉ vào address_reg (case 3'b110: sel=1, rd=1, ld_ir=0)
+        address = 5'b00101;
+        sel = 1;
+        rd  = 1;
+        ld_ir = 0;
+        #10;  // Cạnh clock, địa chỉ được lưu vào address_reg
+        
+        // Bước 2: Đọc dữ liệu từ address_reg (case 3'b111: sel=1, rd=1, ld_ir=1)
+        ld_ir = 1;
+        #10;  // Dữ liệu từ ô nhớ tại địa chỉ đã lưu sẽ được đưa ra data_out (và nạp vào IR)
+        
+        // Reset các tín hiệu điều khiển về mặc định
+        sel = 0;
+        rd  = 0;
+        ld_ir = 0;
+        #10;
+        
+        // --- Ghi và đọc thêm ---
+        // Ghi giá trị 8'h5A vào địa chỉ 5'b01010
+        address = 5'b01010;
+        sel = 1;
+        wr  = 1;
+        rd  = 0;
+        tb_drive_data = 8'h5A;
+        tb_drive_en = 1;
+        #10;
+        tb_drive_en = 0;
+        wr = 0;
+        #10;
+        
+        // Đọc trực tiếp từ địa chỉ 5'b01010 (với tổ hợp 3'b010)
+        address = 5'b01010;
+        sel = 0;
+        rd  = 1;
+        ld_ir = 0;
+        #10;
+        
         $finish;
     end
 
-    // Giám sát tín hiệu: in ra các giá trị quan trọng theo thời gian
+    // In ra thông tin các tín hiệu để theo dõi quá trình mô phỏng
     initial begin
-        $monitor("Time=%t | rst=%b | en=%b | rw=%b | addr=%h | data=%h | instr_addr=%h", 
-                 $time, rst, enable, read_write, address, data, instr_address);
+        $monitor("Time=%0t | rst=%b sel=%b rd=%b wr=%b ld_ir=%b address=%b | data_e=%h data_out=%h", 
+                 $time, rst, sel, rd, wr, ld_ir, address, data_e, data_out);
     end
 
 endmodule
