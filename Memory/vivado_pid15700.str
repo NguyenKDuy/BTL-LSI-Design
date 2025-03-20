@@ -685,3 +685,4 @@ selectCodeEditor("Memory.sv", 416, 214); // ae (Memory.sv)
 // Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 32m:02s
 // Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 32m:04s
 // HMemoryUtils.trashcanNow. Engine heap size: 986 MB. GUI used memory: 87 MB. Current time: 3/20/25, 2:08:59 PM ICT
+// TclEventType: FILE_SET_CHANGE

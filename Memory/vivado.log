@@ -140,3 +140,13 @@ WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-f
 WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Dell\METNHATROI\Memory\Memory.srcs\sources_1\new\Memory.sv:]
 WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Dell\METNHATROI\Memory\Memory.srcs\sources_1\new\Memory.sv:]
 ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Dell\METNHATROI\Memory\Memory.srcs\sources_1\new\Memory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Dell\METNHATROI\Memory\Memory.srcs\sim_1\new\tb_Memory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Dell\METNHATROI\Memory\Memory.srcs\sources_1\new\Memory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Dell\METNHATROI\Memory\Memory.srcs\sources_1\new\Memory.sv:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Dell\METNHATROI\Memory\Memory.srcs\sources_1\new\Memory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Dell\METNHATROI\Memory\Memory.srcs\sim_1\new\tb_Memory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Dell\METNHATROI\Memory\Memory.srcs\sim_1\new\tb_Memory.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Dell\METNHATROI\Memory\Memory.srcs\sim_1\new\tb_Memory.sv:]
+ERROR: [Common 17-180] Spawn failed: No error
