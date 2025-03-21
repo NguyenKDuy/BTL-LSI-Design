@@ -20,112 +20,115 @@
     //////////////////////////////////////////////////////////////////////////////////
     
     
- module tb_memory_5x8;
-    // Tín hiệu testbench
-    reg         clk;
-    reg         rst;
-    reg         sel;
-    reg         rd;
-    reg         wr;
-    reg         ld_ir;
-    reg  [4:0]  address;
+module tb_memory_5x8;
 
-    // Mô phỏng bus 2 chiều: sử dụng data_reg và cờ drive_data để điều khiển
-    reg  [7:0]  data_reg;    // Giá trị sẽ được ghi ra bus
-    reg         drive_data;  // Cờ cho biết testbench có đang drive bus hay không
+    // Parameters
+    parameter DATA_WIDTH = 8;
+    parameter ADDR_WIDTH = 5;
+    parameter MEM_DEPTH  = (1 << ADDR_WIDTH);
 
-    // Tín hiệu kết nối với module
-    wire [7:0]  data_e;      // Bus 2 chiều
-    wire [7:0]  data_out;    // Đầu ra từ bộ nhớ (có thể là lệnh hoặc dữ liệu)
+    // Inputs to DUT
+    reg clk;
+    reg rst;
+    reg sel;
+    reg rd;
+    reg wr;
+    reg ld_ir;
+    reg data_e;
+    reg [ADDR_WIDTH-1:0] address;
 
-    // Kết nối tới module memory_5x8 
+    // Bidirectional data signal
+    wire [DATA_WIDTH-1:0] data_out;
+
+    // Internal driver to simulate data writing (tristate buffer)
+    reg [DATA_WIDTH-1:0] data_driver;
+    assign data_out = (wr && sel && data_e) ? data_driver : {DATA_WIDTH{1'bz}};
+
+    // For observing data during read
+    wire [DATA_WIDTH-1:0] data_read;
+    assign data_read = data_out;
+
+    // Instantiate the memory module
     memory_5x8 uut (
-        .clk      (clk),
-        .rst      (rst),
-        .sel      (sel),
-        .rd       (rd),
-        .wr       (wr),
-        .ld_ir    (ld_ir),
-        .data_e   (data_e),
-        .address  (address),
-        .data_out (data_out)
+        .clk(clk),
+        .rst(rst),
+        .sel(sel),
+        .rd(rd),
+        .wr(wr),
+        .ld_ir(ld_ir),
+        .data_e(data_e),
+        .address(address),
+        .data_out(data_out)
     );
 
-    // Cơ chế ba trạng thái cho bus data_e
-    // Khi drive_data = 1 => bus được drive bởi data_reg, ngược lại thì bus ở trạng thái Z
-    assign data_e = drive_data ? data_reg : 8'bz;
-
-    // Tạo xung clock với chu kỳ 10ns (tần số 100MHz)
+    // Clock generation
     initial begin
         clk = 0;
-        forever #5 clk = ~clk;
+        forever #5 clk = ~clk;  // Clock period = 10ns
     end
 
-    // Kịch bản test cho module
+    // Main stimulus
     initial begin
-        // Khởi tạo các tín hiệu
-        rst        = 1;
-        sel        = 0;
-        rd         = 0;
-        wr         = 0;
-        ld_ir      = 0;
-        drive_data = 0;
-        data_reg   = 8'd0;
-        address    = 5'd0;
+        $display("----- MEMORY TEST START -----");
 
-        // Bước 1: Reset module
-        #10;
-        rst = 0;   // Kết thúc reset
+        // Initial values
+        rst = 1; sel = 0; rd = 0; wr = 0; ld_ir = 0; data_e = 0;
+        address = 0; data_driver = 0;
 
-        // Bước 2: Ghi dữ liệu vào bộ nhớ tại địa chỉ 0
-        sel        = 1;       // Chọn module memory
-        wr         = 1;       // Cho phép ghi
-        rd         = 0;       // Không đọc
-        address    = 5'd0;    // Địa chỉ 0
-        data_reg   = 8'hAA;   // Dữ liệu cần ghi (0xAA)
-        drive_data = 1;       // Drive bus với data_reg
-        #10;                  // Đợi 1 chu kỳ clock
-        #10;                  // Thêm chu kỳ để hoàn tất ghi
+        #12;  // Wait some time then release reset
+        rst = 0;
 
-        // Dừng ghi: Ngừng drive bus và tắt tín hiệu ghi
-        wr         = 0;
-        drive_data = 0;
+        // === Write test ===
+        sel = 1; wr = 1; rd = 0; data_e = 1;
+
+        // Write 0xAB to address 3
+        address = 5'd3;
+        data_driver = 8'hAB;
         #10;
 
-        // Bước 3: Đọc dữ liệu từ địa chỉ 0
-        rd         = 1;       // Cho phép đọc
-        // Sau cạnh clock tới, module sẽ lấy dữ liệu từ mem[address]
-        #10;
-        #10;
-        $display("Read from address 0: data_e = 0x%h, data_out = 0x%h", data_e, data_out);
-
-        // Bước 4: Kích hoạt ld_ir để nạp giá trị từ bộ nhớ vào data_out
-        ld_ir = 1;
-        #10;
-        ld_ir = 0;
-        #10;
-        $display("After ld_ir, data_out = 0x%h", data_out);
-
-        // Bước 5: Thử ghi dữ liệu vào địa chỉ 1
-        rd         = 0;
-        wr         = 1;
-        address    = 5'd1;
-        data_reg   = 8'h55;   // Dữ liệu mới (0x55)
-        drive_data = 1;
-        #10;
+        // Write 0x55 to address 10
+        address = 5'd10;
+        data_driver = 8'h55;
         #10;
 
-        // Đọc lại dữ liệu tại địa chỉ 1
-        wr         = 0;
-        drive_data = 0;
-        rd         = 1;
-        address    = 5'd1;
-        #10;
-        #10;
-        $display("Read from address 1: data_e = 0x%h, data_out = 0x%h", data_e, data_out);
+        // === Read test ===
+        wr = 0; rd = 1; ld_ir = 1;
 
-        // Kết thúc mô phỏng
+        // Read from address 3
+        address = 5'd3;
         #10;
+        $display("Read from address 3: 0x%0h (expected: 0xAB)", data_read);
+
+        // Read from address 10
+        address = 5'd10;
+        #10;
+        $display("Read from address 10: 0x%0h (expected: 0x55)", data_read);
+
+        // === Test read from unwritten address ===
+        address = 5'd20;
+        #10;
+        $display("Read from address 20 (unwritten): 0x%0h (expected: undefined or 0)", data_read);
+
+        // === Test disabled select signal ===
+        sel = 0;  // Disable memory
+        address = 5'd3;
+        #10;
+        $display("Read with sel=0 (should be high-Z or no change): 0x%0h", data_read);
+
+        // === Test simultaneous rd and wr ===
+        sel = 1; rd = 1; wr = 1; data_driver = 8'hFF; address = 5'd15;
+        #10;
+        $display("Simultaneous rd & wr at address 15, read: 0x%0h", data_read);
+
+        // === Final Reset and check ===
+        rst = 1;
+        #10;
+        rst = 0;
+        rd = 1; wr = 0; sel = 1; address = 5'd3;
+        #10;
+        $display("After reset, read address 3: 0x%0h (expected: 0)", data_read);
+
+        $display("----- MEMORY TEST END -----");
         $stop;
     end
 
