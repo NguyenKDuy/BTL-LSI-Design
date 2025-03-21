@@ -38,19 +38,22 @@ module memory_5x8 #(
 
     reg [DATA_WIDTH-1:0] mem [0:MEM_DEPTH-1];
     reg [DATA_WIDTH-1:0] read_data_reg;
-    reg [DATA_WIDTH-1:0] data_in;
-
-    // Cổng ra 3 trạng thái
-    assign data = (rd && sel && data_e) ? read_data_reg : {DATA_WIDTH{1'bz}};
-
+    
+    assign data_out = (rd && sel && data_e) ? read_data_reg : {DATA_WIDTH{1'bz}};
+    
+    // Luồng xử lý đọc/ghi
     always @(posedge clk or posedge rst) begin
         if (rst) begin
             read_data_reg <= {DATA_WIDTH{1'b0}};
+
         end else if (sel) begin
+            // Chức năng ghi: chỉ ghi khi wr=1, rd=0 và data_e=1.
             if (wr && !rd && data_e) begin
-                data_in <= data_out;
-                mem[address] <= data_in;
-            end else if (rd && !wr && data_e) begin
+                // Lấy dữ liệu từ cổng bidirectional 
+                mem[address] <= data_out;
+            end 
+            // Chức năng đọc: chỉ đọc khi rd=1, wr=0 và data_e=1.
+            else if (rd && !wr && data_e) begin
                 read_data_reg <= mem[address];
             end
         end
