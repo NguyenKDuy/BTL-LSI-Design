@@ -1,0 +1,12 @@
+
+{ 
+    crc :  3122339568322682454  , 
+    ccp_crc :  0  , 
+    cmdline : " --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_risc8b_behav xil_defaultlib.tb_risc8b xil_defaultlib.glbl -L uvm" , 
+    buildDate : "Nov  8 2024" , 
+    buildTime : "22:36:57" , 
+    linkCmd : "E:\\Vivado24.2\\Vivado\\2024.2\\data\\..\\tps\\mingw\\6.2.0\\win64.o\\nt\\bin\\gcc.exe -Wa,-W  -O -Wl,--stack,104857600 -o \"xsim.dir/tb_risc8b_behav/xsimk.exe\"   \"xsim.dir/tb_risc8b_behav/obj/xsim_0.win64.obj\" \"xsim.dir/tb_risc8b_behav/obj/xsim_1.win64.obj\" -L\"E:\\Vivado24.2\\Vivado\\2024.2\\lib\\win64.o\" -lxv_simulator_kernel   -lxv_simbridge_kernel" , 
+    aggregate_nets : 
+    [ 
+    ] 
+} 
