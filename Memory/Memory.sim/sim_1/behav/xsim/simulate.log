@@ -1,10 +1,3 @@
 Time resolution is 1 ps
------ MEMORY TEST START -----
-Read from address 3: 0xzz (expected: 0xAB)
-Read from address 10: 0xzz (expected: 0x55)
-Read from address 20 (unwritten): 0xzz (expected: undefined or 0)
-Read with sel=0 (should be high-Z or no change): 0xzz
-Simultaneous rd & wr at address 15, read: 0xff
-After reset, read address 3: 0xzz (expected: 0)
------ MEMORY TEST END -----
-$stop called at time : 102 ns : File "C:/Users/Dell/METNHATROI/Memory/Memory.srcs/sim_1/new/tb_Memory.sv" Line 132
+Time 40000: Đọc giá trị: a5 (mục tiêu: A5)
+$finish called at time : 60 ns : File "C:/Users/Dell/METNHATROI/Memory/Memory.srcs/sim_1/new/tb_Memory.sv" Line 121

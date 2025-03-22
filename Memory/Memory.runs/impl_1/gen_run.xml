@@ -1,70 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="impl_1" LaunchPart="xc7z010iclg400-1L" LaunchTime="1742543226">
-  <File Type="PA-TCL" Name="memory_5x8.tcl"/>
   <File Type="REPORTS-TCL" Name="memory_5x8_reports.tcl"/>
-  <File Type="INIT-TIMING" Name="memory_5x8_timing_summary_init.rpt"/>
-  <File Type="OPT-DCP" Name="memory_5x8_opt.dcp"/>
+  <File Type="ROUTE-PWR-SUM" Name="memory_5x8_power_summary_routed.pb"/>
+  <File Type="BITSTR-MMI" Name="memory_5x8.mmi"/>
   <File Type="OPT-DRC" Name="memory_5x8_drc_opted.rpt"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="memory_5x8_methodology_drc_opted.rpt"/>
-  <File Type="OPT-HWDEF" Name="memory_5x8.hwdef"/>
-  <File Type="OPT-TIMING" Name="memory_5x8_timing_summary_opted.rpt"/>
-  <File Type="OPT-RQA-PB" Name="memory_5x8_rqa_opted.pb"/>
-  <File Type="PWROPT-DCP" Name="memory_5x8_pwropt.dcp"/>
-  <File Type="PWROPT-DRC" Name="memory_5x8_drc_pwropted.rpt"/>
-  <File Type="PWROPT-TIMING" Name="memory_5x8_timing_summary_pwropted.rpt"/>
-  <File Type="PLACE-DCP" Name="memory_5x8_placed.dcp"/>
-  <File Type="PLACE-IO" Name="memory_5x8_io_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="memory_5x8_clock_utilization_placed.rpt"/>
+  <File Type="BG-DRC" Name="memory_5x8.drc"/>
+  <File Type="ROUTE-STATUS-PB" Name="memory_5x8_route_status.pb"/>
+  <File Type="BG-BGN" Name="memory_5x8.bgn"/>
   <File Type="PLACE-UTIL" Name="memory_5x8_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL-PB" Name="memory_5x8_utilization_placed.pb"/>
-  <File Type="PLACE-CTRL" Name="memory_5x8_control_sets_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="memory_5x8_incremental_reuse_placed.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="memory_5x8_incremental_reuse_pre_placed.rpt"/>
-  <File Type="PLACE-TIMING" Name="memory_5x8_timing_summary_placed.rpt"/>
-  <File Type="PLACE-RQA-PB" Name="memory_5x8_rqa_placed.pb"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="memory_5x8_postplace_pwropt.dcp"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="memory_5x8_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="PHYSOPT-DCP" Name="memory_5x8_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="memory_5x8_drc_physopted.rpt"/>
-  <File Type="PHYSOPT-TIMING" Name="memory_5x8_timing_summary_physopted.rpt"/>
-  <File Type="ROUTE-ERROR-DCP" Name="memory_5x8_routed_error.dcp"/>
-  <File Type="ROUTE-DCP" Name="memory_5x8_routed.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="memory_5x8_routed_bb.dcp"/>
-  <File Type="ROUTE-DRC" Name="memory_5x8_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-PB" Name="memory_5x8_drc_routed.pb"/>
-  <File Type="ROUTE-DRC-RPX" Name="memory_5x8_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="memory_5x8_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="memory_5x8_methodology_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="memory_5x8_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-PWR" Name="memory_5x8_power_routed.rpt"/>
-  <File Type="ROUTE-PWR-SUM" Name="memory_5x8_power_summary_routed.pb"/>
-  <File Type="ROUTE-PWR-RPX" Name="memory_5x8_power_routed.rpx"/>
-  <File Type="ROUTE-STATUS" Name="memory_5x8_route_status.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="memory_5x8_route_status.pb"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="memory_5x8_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-TIMING-PB" Name="memory_5x8_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMING-RPX" Name="memory_5x8_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-SIMILARITY" Name="memory_5x8_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="memory_5x8_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW" Name="memory_5x8_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="memory_5x8_bus_skew_routed.pb"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="memory_5x8_bus_skew_routed.rpx"/>
-  <File Type="ROUTE-RQS-PB" Name="memory_5x8_rqs_routed.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="memory_5x8_postroute_physopt.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="memory_5x8_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="memory_5x8_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="memory_5x8_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="memory_5x8_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="memory_5x8_bus_skew_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="memory_5x8_bus_skew_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="memory_5x8_bus_skew_postroute_physopted.rpx"/>
-  <File Type="BG-BIT" Name="memory_5x8.bit"/>
+  <File Type="PLACE-IO" Name="memory_5x8_io_placed.rpt"/>
   <File Type="BG-BIN" Name="memory_5x8.bin"/>
+  <File Type="PLACE-CTRL" Name="memory_5x8_control_sets_placed.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="memory_5x8_power_routed.rpx"/>
+  <File Type="ROUTE-DCP" Name="memory_5x8_routed.dcp"/>
   <File Type="BITSTR-MSK" Name="memory_5x8.msk"/>
   <File Type="BITSTR-RBT" Name="memory_5x8.rbt"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="memory_5x8_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-RPX" Name="memory_5x8_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="memory_5x8_route_status.rpt"/>
+  <File Type="PA-TCL" Name="memory_5x8.tcl"/>
+  <File Type="ROUTE-PWR" Name="memory_5x8_power_routed.rpt"/>
+  <File Type="ROUTE-DRC" Name="memory_5x8_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-RPX" Name="memory_5x8_drc_routed.rpx"/>
+  <File Type="ROUTE-DRC-PB" Name="memory_5x8_drc_routed.pb"/>
+  <File Type="BITSTR-SYSDEF" Name="memory_5x8.sysdef"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="memory_5x8_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="memory_5x8_methodology_drc_routed.rpx"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="memory_5x8.ltx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="memory_5x8_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-SIMILARITY" Name="memory_5x8_incremental_reuse_routed.rpt"/>
+  <File Type="RDI-RDI" Name="memory_5x8.vdi"/>
+  <File Type="ROUTE-CLK" Name="memory_5x8_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="memory_5x8_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="memory_5x8_bus_skew_routed.rpx"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="memory_5x8_bus_skew_routed.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="memory_5x8_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="memory_5x8_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="memory_5x8_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="memory_5x8_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="memory_5x8_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BG-BIT" Name="memory_5x8.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="memory_5x8_bus_skew_postroute_physopted.pb"/>
   <File Type="BITSTR-NKY" Name="memory_5x8.nky"/>
   <File Type="BITSTR-BMM" Name="memory_5x8_bd.bmm"/>
-  <File Type="BITSTR-MMI" Name="memory_5x8.mmi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="OPT-HWDEF" Name="memory_5x8.hwdef"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="memory_5x8_incremental_reuse_pre_placed.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="memory_5x8_routed_error.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="memory_5x8_routed_bb.dcp"/>
+  <File Type="ROUTE-TIMING-PB" Name="memory_5x8_timing_summary_routed.pb"/>
+  <File Type="OPT-DCP" Name="memory_5x8_opt.dcp"/>
+  <File Type="PLACE-DCP" Name="memory_5x8_placed.dcp"/>
+  <File Type="PWROPT-DCP" Name="memory_5x8_pwropt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="memory_5x8_postplace_pwropt.dcp"/>
+  <File Type="PHYSOPT-DCP" Name="memory_5x8_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="memory_5x8_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="memory_5x8_postroute_physopt_bb.dcp"/>
   <File Type="PDI-FILE" Name="memory_5x8.pdi"/>
   <File Type="BOOT-PDI-FILE" Name="memory_5x8_boot.pdi"/>
   <File Type="PL-PDI-FILE" Name="memory_5x8_pld.pdi"/>
@@ -73,13 +66,6 @@
   <File Type="RNPI_FILE" Name="memory_5x8.rnpi"/>
   <File Type="NPI_FILE" Name="memory_5x8.npi"/>
   <File Type="RBD_FILE" Name="memory_5x8.rbd"/>
-  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="memory_5x8.ltx"/>
-  <File Type="BITSTR-SYSDEF" Name="memory_5x8.sysdef"/>
-  <File Type="BG-BGN" Name="memory_5x8.bgn"/>
-  <File Type="BG-DRC" Name="memory_5x8.drc"/>
-  <File Type="RDI-RDI" Name="memory_5x8.vdi"/>
-  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="ROUTE-RQS" Name="memory_5x8_routed.rqs"/>
   <File Type="POSTROUTE-PHYSOPT-RQS" Name="memory_5x8_postroute_physopted.rqs"/>
   <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
@@ -130,5 +116,6 @@
     <Step Id="route_design"/>
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
+    <Step Id="write_device_image"/>
   </Strategy>
 </GenRun>
