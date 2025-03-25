@@ -59,7 +59,7 @@ module risc_8b#(
         .rst(rst),          // Reset
         .load(load_top),         // Signal Load dữ liệu ra output
         .data_in(data_out_top), // input 8-bit
-        .inA(in_A_top));
+        .inB(in_B_top));
     
         alu ALU (
                 .opcode(opcode_top),
@@ -73,7 +73,7 @@ module risc_8b#(
                 .rst(rst),
                 .ld_ac(ld_ac_top),
                 .data_in(alu_out),
-                .data_out(in_B_top)
+                .data_out(in_A_top)
 );
                 
         ADD_MUX add_mux 
@@ -104,7 +104,7 @@ module risc_8b#(
 
         bus_control BS (
                 .ctrl_signal (ctrl_signal_top|| data_e_top),
-                .data_tx(in_B_top),
+                .data_tx(in_A_top),
                 .data_rx(data_out_top),
                 .bidr(bidr_top)
         );
@@ -114,8 +114,7 @@ endmodule
 
 module bus_control #(
     parameter DATA_WIDTH = 8,                 
-    parameter ADDR_WIDTH = 5,                 
-    parameter MEM_DEPTH  = (1 << ADDR_WIDTH)   
+    parameter ADDR_WIDTH = 5                 
 )(
         
         input ctrl_signal,

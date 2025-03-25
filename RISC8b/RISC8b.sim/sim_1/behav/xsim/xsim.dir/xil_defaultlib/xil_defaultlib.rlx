@@ -2,13 +2,13 @@
 2020.2
 Nov  8 2024
 22:36:57
-E:/Downloads/RISC8b/src/Address Mux.sv,1742481484,systemVerilog,,E:/Downloads/RISC8b/src/Memory.sv,,ADD_MUX,,uvm,,,,,,
-E:/Downloads/RISC8b/src/Memory.sv,1742611476,systemVerilog,,E:/Downloads/RISC8b/src/Register.sv,,memory,,uvm,,,,,,
-E:/Downloads/RISC8b/src/Register.sv,1742485375,systemVerilog,,E:/Downloads/RISC8b/src/accumulator.sv,,Register,,uvm,,,,,,
-E:/Downloads/RISC8b/src/accumulator.sv,1742481460,systemVerilog,,E:/Downloads/RISC8b/src/alu.sv,,accumulator,,uvm,,,,,,
-E:/Downloads/RISC8b/src/alu.sv,1742563163,systemVerilog,,E:/Downloads/RISC8b/src/controller.sv,,alu,,uvm,,,,,,
-E:/Downloads/RISC8b/src/controller.sv,1742582310,systemVerilog,,E:/Downloads/RISC8b/src/program_counter.sv,,controller,,uvm,,,,,,
-E:/Downloads/RISC8b/src/program_counter.sv,1742485400,systemVerilog,,E:/Downloads/RISC8b/src/risc_8b.sv,,program_counter,,uvm,,,,,,
-E:/Downloads/RISC8b/src/risc_8b.sv,1742611499,systemVerilog,,E:/VivadoProjects/RISC8b/RISC8b.srcs/sim_1/new/tb_risc8b.sv,,bus_control;risc_8b,,uvm,,,,,,
-E:/VivadoProjects/RISC8b/RISC8b.sim/sim_1/behav/xsim/glbl.v,1724786425,verilog,,,,glbl,,uvm,,,,,,
-E:/VivadoProjects/RISC8b/RISC8b.srcs/sim_1/new/tb_risc8b.sv,1742558570,systemVerilog,,,,tb_risc8b,,uvm,,,,,,
+E:/Downloads/RISC8b/BTL-LSI-Design/RISC8b/RISC8b.sim/sim_1/behav/xsim/glbl.v,1724786425,verilog,,,,glbl,,uvm,,,,,,
+E:/Downloads/RISC8b/BTL-LSI-Design/RISC8b/RISC8b.srcs/sim_1/new/tb_risc8b.sv,1742558570,systemVerilog,,,,tb_risc8b,,uvm,,,,,,
+E:/Downloads/RISC8b/BTL-LSI-Design/src/Address Mux.sv,1742481484,systemVerilog,,E:/Downloads/RISC8b/BTL-LSI-Design/src/Memory.sv,,ADD_MUX,,uvm,,,,,,
+E:/Downloads/RISC8b/BTL-LSI-Design/src/Memory.sv,1742612073,systemVerilog,,E:/Downloads/RISC8b/BTL-LSI-Design/src/Register.sv,,memory,,uvm,,,,,,
+E:/Downloads/RISC8b/BTL-LSI-Design/src/Register.sv,1742907200,systemVerilog,,E:/Downloads/RISC8b/BTL-LSI-Design/src/accumulator.sv,,Register,,uvm,,,,,,
+E:/Downloads/RISC8b/BTL-LSI-Design/src/accumulator.sv,1742481460,systemVerilog,,E:/Downloads/RISC8b/BTL-LSI-Design/src/alu.sv,,accumulator,,uvm,,,,,,
+E:/Downloads/RISC8b/BTL-LSI-Design/src/alu.sv,1742907214,systemVerilog,,E:/Downloads/RISC8b/BTL-LSI-Design/src/controller.sv,,alu,,uvm,,,,,,
+E:/Downloads/RISC8b/BTL-LSI-Design/src/controller.sv,1742582310,systemVerilog,,E:/Downloads/RISC8b/BTL-LSI-Design/src/program_counter.sv,,controller,,uvm,,,,,,
+E:/Downloads/RISC8b/BTL-LSI-Design/src/program_counter.sv,1742485400,systemVerilog,,E:/Downloads/RISC8b/BTL-LSI-Design/src/risc_8b.sv,,program_counter,,uvm,,,,,,
+E:/Downloads/RISC8b/BTL-LSI-Design/src/risc_8b.sv,1742907384,systemVerilog,,E:/Downloads/RISC8b/BTL-LSI-Design/RISC8b/RISC8b.srcs/sim_1/new/tb_risc8b.sv,,bus_control;risc_8b,,uvm,,,,,,

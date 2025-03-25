@@ -35,7 +35,7 @@ always @(*) begin
         3'b010: res = inA + inB; //ADD 
         3'b011: res = inA & inB; //AND
         3'b100: res = inA ^ inB; //XOR
-        3'b101: res = inA; //LDA        - changed
+        3'b101: res = inB; //LDA        - changed
         3'b110: res = inA; //STO
         3'b111: res = inA; //JMP
         
