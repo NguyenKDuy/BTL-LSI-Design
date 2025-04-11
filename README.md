@@ -29,6 +29,8 @@ Range: (−31.0,−0.1328125)∪(0.1328125,31.0)
 
       In this part, I use 8'b00000000 to represent zero for handling opcodes.
 
+      Therefore, we will start with 8'b00000001 and end with 8'b01111111 in the case of positive numbers. For negative numbers, we use the same range but with the sign bit set to 1, resulting in values from 8'b10000001 to 8'b11111111.
+
 Exponent Gap Issue
 
 - If exponent difference > 4, smaller operand is shifted out completely
