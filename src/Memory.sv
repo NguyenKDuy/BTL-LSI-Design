@@ -36,7 +36,7 @@ module memory #(
     inout  [DATA_WIDTH-1:0] bidr     // Dữ liệu đầu ra (có thể là lệnh hoặc dữ liệu)
 );      
 
-    logic [DATA_WIDTH-1:0] mem [0:MEM_DEPTH-1];
+     reg [DATA_WIDTH-1:0] mem [0:MEM_DEPTH-1];
      logic [DATA_WIDTH-1:0] data_tx;
      logic [DATA_WIDTH-1:0] data_rx;
      logic [ADDR_WIDTH-1:0] addr_reg;
@@ -48,7 +48,7 @@ module memory #(
                 else begin
                         if (wr && data_e  && !rd) begin
                                 mem[addr_reg] <= data_rx;
-                                $display("%t - mem[%0d]: %h", $time, addr_reg, data_rx);
+//                                $display("%t - mem[%0d]: %h", $time, addr_reg, data_rx);
                         end     
                         else if ({sel,rd,ld_ir} inside {3'b111, 3'b110,3'b010, 3'b000} && !data_e) begin
                                 data_tx <= mem[address];                                                                  //Load datamem to data_tx
@@ -58,9 +58,5 @@ module memory #(
         end
         assign bidr = ({sel,rd,ld_ir} inside {3'b110, 3'b111, 3'b000, 3'b010,  3'b100} && (!data_e)) ? data_tx : 'hz;
         assign data_rx = bidr;
-        
-        initial begin
-                 # 35 $readmemb("rmem.bin", mem);
-        end
         
 endmodule

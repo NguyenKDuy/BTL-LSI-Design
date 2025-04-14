@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "E:/VivadoProjects/RISC8b/RISC8b.runs/synth_1/risc_8b.tcl"
+  variable script "E:/Downloads/RISC8b/BTL-LSI-Design/RISC8b/RISC8b.runs/synth_1/risc_8b.tcl"
   variable category "vivado_synth"
 }
 
@@ -62,23 +62,24 @@ create_project -in_memory -part xc7z020clg400-2
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir E:/VivadoProjects/RISC8b/RISC8b.cache/wt [current_project]
-set_property parent.project_path E:/VivadoProjects/RISC8b/RISC8b.xpr [current_project]
+set_property webtalk.parent_dir E:/Downloads/RISC8b/BTL-LSI-Design/RISC8b/RISC8b.cache/wt [current_project]
+set_property parent.project_path E:/Downloads/RISC8b/BTL-LSI-Design/RISC8b/RISC8b.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo e:/VivadoProjects/RISC8b/RISC8b.cache/ip [current_project]
+set_property ip_output_repo e:/Downloads/RISC8b/BTL-LSI-Design/RISC8b/RISC8b.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib -sv {
-  {E:/Downloads/RISC8b/src/Address Mux.sv}
-  E:/Downloads/RISC8b/src/Memory.sv
-  E:/Downloads/RISC8b/src/Register.sv
-  E:/Downloads/RISC8b/src/accumulator.sv
-  E:/Downloads/RISC8b/src/alu.sv
-  E:/Downloads/RISC8b/src/controller.sv
-  E:/Downloads/RISC8b/src/program_counter.sv
-  E:/Downloads/RISC8b/src/risc_8b.sv
+  {E:/Downloads/RISC8b/BTL-LSI-Design/src/Address Mux.sv}
+  E:/Downloads/RISC8b/BTL-LSI-Design/src/Memory.sv
+  E:/Downloads/RISC8b/BTL-LSI-Design/src/Register.sv
+  E:/Downloads/RISC8b/BTL-LSI-Design/src/accumulator.sv
+  E:/Downloads/RISC8b/BTL-LSI-Design/src/alu.sv
+  E:/Downloads/RISC8b/BTL-LSI-Design/src/bus_control.sv
+  E:/Downloads/RISC8b/BTL-LSI-Design/src/controller.sv
+  E:/Downloads/RISC8b/BTL-LSI-Design/src/program_counter.sv
+  E:/Downloads/RISC8b/BTL-LSI-Design/src/risc_8b.sv
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -89,10 +90,9 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc E:/Downloads/Arty-Z7-20-Master.xdc
-set_property used_in_implementation false [get_files E:/Downloads/Arty-Z7-20-Master.xdc]
-
 set_param ips.enableIPCacheLiteLoad 1
+
+read_checkpoint -auto_incremental -incremental E:/Downloads/RISC8b/BTL-LSI-Design/RISC8b/RISC8b.srcs/utils_1/imports/synth_1/risc_8b.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

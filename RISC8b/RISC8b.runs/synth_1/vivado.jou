@@ -3,12 +3,12 @@
 # SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
 # IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
 # SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-# Start of session at: Thu Mar 20 23:24:29 2025
-# Process ID         : 7624
-# Current directory  : E:/VivadoProjects/RISC8b/RISC8b.runs/synth_1
+# Start of session at: Fri Apr 11 16:52:16 2025
+# Process ID         : 6236
+# Current directory  : E:/Downloads/RISC8b/BTL-LSI-Design/RISC8b/RISC8b.runs/synth_1
 # Command line       : vivado.exe -log risc_8b.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source risc_8b.tcl
-# Log file           : E:/VivadoProjects/RISC8b/RISC8b.runs/synth_1/risc_8b.vds
-# Journal file       : E:/VivadoProjects/RISC8b/RISC8b.runs/synth_1\vivado.jou
+# Log file           : E:/Downloads/RISC8b/BTL-LSI-Design/RISC8b/RISC8b.runs/synth_1/risc_8b.vds
+# Journal file       : E:/Downloads/RISC8b/BTL-LSI-Design/RISC8b/RISC8b.runs/synth_1\vivado.jou
 # Running On         : LAPTOP-92N761HV
 # Platform           : Windows Server 2016 or Windows 10
 # Operating System   : 26100
@@ -17,8 +17,8 @@
 # CPU Physical cores : 8
 # CPU Logical cores  : 16
 # Host memory        : 16371 MB
-# Swap memory        : 11274 MB
-# Total Virtual      : 27645 MB
-# Available Virtual  : 9988 MB
+# Swap memory        : 8589 MB
+# Total Virtual      : 24961 MB
+# Available Virtual  : 10538 MB
 #-----------------------------------------------------------
 source risc_8b.tcl -notrace

@@ -39,6 +39,7 @@ module tb_risc8b#(
         rst = 1;
         #35;
         rst = 0;
+        $readmemb("wmem.bin", dut.Memory.mem);
     end
     always #10 clk = ~clk;
     

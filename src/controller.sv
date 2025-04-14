@@ -27,7 +27,7 @@ module controller(
         output logic [2:0] op_out,
         output logic sel, rd, ld_ir, halt, inc_pc, ld_ac, ld_pc, wr, data_e,            //default control signals
         output logic load, addr_mux,                                                                     //added control signals
-        output [2:0] phase
+        output [3:0] phasestate
     );
     
     enum logic [3:0] {
@@ -41,7 +41,7 @@ module controller(
         ALU_OP,
         STORE
     } phase;
-    
+    assign phasestate = phase;
     enum logic [2:0] {
         HLT,    
         SKZ,

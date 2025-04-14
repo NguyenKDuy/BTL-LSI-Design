@@ -100,7 +100,7 @@ module risc_8b#(
                 .data_e(data_e_top),            //default control signals
                 .load(load_top), 
                 .addr_mux(addr_mux_top),
-                .phase(phase_top));
+                .phasestate(phase_top));
 
         bus_control BS (
                 .ctrl_signal (ctrl_signal_top|| data_e_top),
@@ -112,16 +112,3 @@ module risc_8b#(
         assign ctrl_signal_top = {sel_top,rd_top,ld_ir_top} inside {3'b110, 3'b111, 3'b000, 3'b010, 3'b100} ? 0 : 1;
 endmodule
 
-module bus_control #(
-    parameter DATA_WIDTH = 8,                 
-    parameter ADDR_WIDTH = 5                 
-)(
-        
-        input ctrl_signal,
-        input [DATA_WIDTH-1:0] data_tx,
-        output [DATA_WIDTH-1:0] data_rx,
-        inout [DATA_WIDTH-1:0] bidr
-);
-        assign data_rx = bidr;
-        assign bidr = ctrl_signal ? data_tx : 'hz;
-endmodule

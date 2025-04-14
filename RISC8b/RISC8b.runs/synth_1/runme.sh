@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='E:/VivadoProjects/RISC8b/RISC8b.runs/synth_1'
+HD_PWD='E:/Downloads/RISC8b/BTL-LSI-Design/RISC8b/RISC8b.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

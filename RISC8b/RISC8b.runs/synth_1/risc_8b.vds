@@ -3,12 +3,12 @@
 # SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
 # IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
 # SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-# Start of session at: Thu Mar 20 23:24:29 2025
-# Process ID         : 7624
-# Current directory  : E:/VivadoProjects/RISC8b/RISC8b.runs/synth_1
+# Start of session at: Fri Apr 11 16:52:16 2025
+# Process ID         : 6236
+# Current directory  : E:/Downloads/RISC8b/BTL-LSI-Design/RISC8b/RISC8b.runs/synth_1
 # Command line       : vivado.exe -log risc_8b.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source risc_8b.tcl
-# Log file           : E:/VivadoProjects/RISC8b/RISC8b.runs/synth_1/risc_8b.vds
-# Journal file       : E:/VivadoProjects/RISC8b/RISC8b.runs/synth_1\vivado.jou
+# Log file           : E:/Downloads/RISC8b/BTL-LSI-Design/RISC8b/RISC8b.runs/synth_1/risc_8b.vds
+# Journal file       : E:/Downloads/RISC8b/BTL-LSI-Design/RISC8b/RISC8b.runs/synth_1\vivado.jou
 # Running On         : LAPTOP-92N761HV
 # Platform           : Windows Server 2016 or Windows 10
 # Operating System   : 26100
@@ -17,271 +17,92 @@
 # CPU Physical cores : 8
 # CPU Logical cores  : 16
 # Host memory        : 16371 MB
-# Swap memory        : 11274 MB
-# Total Virtual      : 27645 MB
-# Available Virtual  : 9988 MB
+# Swap memory        : 8589 MB
+# Total Virtual      : 24961 MB
+# Available Virtual  : 10538 MB
 #-----------------------------------------------------------
 source risc_8b.tcl -notrace
-create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 619.332 ; gain = 190.520
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 620.207 ; gain = 190.578
+Command: read_checkpoint -auto_incremental -incremental E:/Downloads/RISC8b/BTL-LSI-Design/RISC8b/RISC8b.srcs/utils_1/imports/synth_1/risc_8b.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from E:/Downloads/RISC8b/BTL-LSI-Design/RISC8b/RISC8b.srcs/utils_1/imports/synth_1/risc_8b.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
 Command: synth_design -top risc_8b -part xc7z020clg400-2
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
-INFO: [Device 21-403] Loading part xc7z020clg400-2
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 11144
+INFO: [Synth 8-7075] Helper process launched with PID 20744
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1317.430 ; gain = 466.758
+Starting Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1097.578 ; gain = 465.809
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-11241] undeclared symbol 'sel_top', assumed default net type 'wire' [E:/Downloads/RISC8b/src/risc_8b.sv:39]
-INFO: [Synth 8-11241] undeclared symbol 'inc_pc_top', assumed default net type 'wire' [E:/Downloads/RISC8b/src/risc_8b.sv:40]
-INFO: [Synth 8-11241] undeclared symbol 'ld_pc_top', assumed default net type 'wire' [E:/Downloads/RISC8b/src/risc_8b.sv:41]
-INFO: [Synth 8-11241] undeclared symbol 'jmp_top', assumed default net type 'wire' [E:/Downloads/RISC8b/src/risc_8b.sv:42]
-INFO: [Synth 8-11241] undeclared symbol 'sel', assumed default net type 'wire' [E:/Downloads/RISC8b/src/risc_8b.sv:48]
-INFO: [Synth 8-11241] undeclared symbol 'rd_top', assumed default net type 'wire' [E:/Downloads/RISC8b/src/risc_8b.sv:49]
-INFO: [Synth 8-11241] undeclared symbol 'wr_top', assumed default net type 'wire' [E:/Downloads/RISC8b/src/risc_8b.sv:50]
-INFO: [Synth 8-11241] undeclared symbol 'ld_ir_top', assumed default net type 'wire' [E:/Downloads/RISC8b/src/risc_8b.sv:51]
-INFO: [Synth 8-11241] undeclared symbol 'data_e_top', assumed default net type 'wire' [E:/Downloads/RISC8b/src/risc_8b.sv:52]
-INFO: [Synth 8-11241] undeclared symbol 'load_top', assumed default net type 'wire' [E:/Downloads/RISC8b/src/risc_8b.sv:59]
-INFO: [Synth 8-11241] undeclared symbol 'is_zero_top', assumed default net type 'wire' [E:/Downloads/RISC8b/src/risc_8b.sv:68]
-INFO: [Synth 8-11241] undeclared symbol 'ld_ac_top', assumed default net type 'wire' [E:/Downloads/RISC8b/src/risc_8b.sv:73]
-INFO: [Synth 8-11241] undeclared symbol 'addr_mux_top', assumed default net type 'wire' [E:/Downloads/RISC8b/src/risc_8b.sv:81]
-INFO: [Synth 8-6157] synthesizing module 'risc_8b' [E:/Downloads/RISC8b/src/risc_8b.sv:23]
-INFO: [Synth 8-6157] synthesizing module 'program_counter' [E:/Downloads/RISC8b/src/program_counter.sv:22]
-INFO: [Synth 8-6155] done synthesizing module 'program_counter' (0#1) [E:/Downloads/RISC8b/src/program_counter.sv:22]
-WARNING: [Synth 8-689] width (1) of port connection 'jmp' does not match port width (5) of module 'program_counter' [E:/Downloads/RISC8b/src/risc_8b.sv:42]
-INFO: [Synth 8-6157] synthesizing module 'memory' [E:/Downloads/RISC8b/src/Memory.sv:23]
-INFO: [Synth 8-6155] done synthesizing module 'memory' (0#1) [E:/Downloads/RISC8b/src/Memory.sv:23]
-INFO: [Synth 8-6157] synthesizing module 'Register' [E:/Downloads/RISC8b/src/Register.sv:23]
-INFO: [Synth 8-6155] done synthesizing module 'Register' (0#1) [E:/Downloads/RISC8b/src/Register.sv:23]
-INFO: [Synth 8-6157] synthesizing module 'alu' [E:/Downloads/RISC8b/src/alu.sv:23]
-INFO: [Synth 8-226] default block is never used [E:/Downloads/RISC8b/src/alu.sv:32]
-INFO: [Synth 8-6155] done synthesizing module 'alu' (0#1) [E:/Downloads/RISC8b/src/alu.sv:23]
-INFO: [Synth 8-6157] synthesizing module 'accumulator' [E:/Downloads/RISC8b/src/accumulator.sv:25]
-INFO: [Synth 8-6155] done synthesizing module 'accumulator' (0#1) [E:/Downloads/RISC8b/src/accumulator.sv:25]
-INFO: [Synth 8-6157] synthesizing module 'ADD_MUX' [E:/Downloads/RISC8b/src/Address Mux.sv:23]
-INFO: [Synth 8-6155] done synthesizing module 'ADD_MUX' (0#1) [E:/Downloads/RISC8b/src/Address Mux.sv:23]
-INFO: [Synth 8-6157] synthesizing module 'controller' [E:/Downloads/RISC8b/src/controller.sv:23]
-INFO: [Synth 8-6155] done synthesizing module 'controller' (0#1) [E:/Downloads/RISC8b/src/controller.sv:23]
-INFO: [Synth 8-6155] done synthesizing module 'risc_8b' (0#1) [E:/Downloads/RISC8b/src/risc_8b.sv:23]
-WARNING: [Synth 8-3848] Net jmp_top in module/entity risc_8b does not have driver. [E:/Downloads/RISC8b/src/risc_8b.sv:42]
-WARNING: [Synth 8-3848] Net sel in module/entity risc_8b does not have driver. [E:/Downloads/RISC8b/src/risc_8b.sv:48]
+INFO: [Synth 8-11241] undeclared symbol 'sel_top', assumed default net type 'wire' [E:/Downloads/RISC8b/BTL-LSI-Design/src/risc_8b.sv:40]
+INFO: [Synth 8-11241] undeclared symbol 'inc_pc_top', assumed default net type 'wire' [E:/Downloads/RISC8b/BTL-LSI-Design/src/risc_8b.sv:41]
+INFO: [Synth 8-11241] undeclared symbol 'ld_pc_top', assumed default net type 'wire' [E:/Downloads/RISC8b/BTL-LSI-Design/src/risc_8b.sv:42]
+INFO: [Synth 8-11241] undeclared symbol 'rd_top', assumed default net type 'wire' [E:/Downloads/RISC8b/BTL-LSI-Design/src/risc_8b.sv:50]
+INFO: [Synth 8-11241] undeclared symbol 'wr_top', assumed default net type 'wire' [E:/Downloads/RISC8b/BTL-LSI-Design/src/risc_8b.sv:51]
+INFO: [Synth 8-11241] undeclared symbol 'ld_ir_top', assumed default net type 'wire' [E:/Downloads/RISC8b/BTL-LSI-Design/src/risc_8b.sv:52]
+INFO: [Synth 8-11241] undeclared symbol 'data_e_top', assumed default net type 'wire' [E:/Downloads/RISC8b/BTL-LSI-Design/src/risc_8b.sv:53]
+INFO: [Synth 8-11241] undeclared symbol 'load_top', assumed default net type 'wire' [E:/Downloads/RISC8b/BTL-LSI-Design/src/risc_8b.sv:60]
+INFO: [Synth 8-11241] undeclared symbol 'is_zero_top', assumed default net type 'wire' [E:/Downloads/RISC8b/BTL-LSI-Design/src/risc_8b.sv:69]
+INFO: [Synth 8-11241] undeclared symbol 'ld_ac_top', assumed default net type 'wire' [E:/Downloads/RISC8b/BTL-LSI-Design/src/risc_8b.sv:74]
+INFO: [Synth 8-11241] undeclared symbol 'addr_mux_top', assumed default net type 'wire' [E:/Downloads/RISC8b/BTL-LSI-Design/src/risc_8b.sv:82]
+INFO: [Synth 8-11241] undeclared symbol 'ctrl_signal_top', assumed default net type 'wire' [E:/Downloads/RISC8b/BTL-LSI-Design/src/risc_8b.sv:106]
+INFO: [Synth 8-6157] synthesizing module 'risc_8b' [E:/Downloads/RISC8b/BTL-LSI-Design/src/risc_8b.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'program_counter' [E:/Downloads/RISC8b/BTL-LSI-Design/src/program_counter.sv:22]
+INFO: [Synth 8-6155] done synthesizing module 'program_counter' (0#1) [E:/Downloads/RISC8b/BTL-LSI-Design/src/program_counter.sv:22]
+INFO: [Synth 8-6157] synthesizing module 'memory' [E:/Downloads/RISC8b/BTL-LSI-Design/src/Memory.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'memory' (0#1) [E:/Downloads/RISC8b/BTL-LSI-Design/src/Memory.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'Register' [E:/Downloads/RISC8b/BTL-LSI-Design/src/Register.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'Register' (0#1) [E:/Downloads/RISC8b/BTL-LSI-Design/src/Register.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'alu' [E:/Downloads/RISC8b/BTL-LSI-Design/src/alu.sv:23]
+INFO: [Synth 8-226] default block is never used [E:/Downloads/RISC8b/BTL-LSI-Design/src/alu.sv:32]
+INFO: [Synth 8-6155] done synthesizing module 'alu' (0#1) [E:/Downloads/RISC8b/BTL-LSI-Design/src/alu.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'accumulator' [E:/Downloads/RISC8b/BTL-LSI-Design/src/accumulator.sv:25]
+INFO: [Synth 8-6155] done synthesizing module 'accumulator' (0#1) [E:/Downloads/RISC8b/BTL-LSI-Design/src/accumulator.sv:25]
+INFO: [Synth 8-6157] synthesizing module 'ADD_MUX' [E:/Downloads/RISC8b/BTL-LSI-Design/src/Address Mux.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'ADD_MUX' (0#1) [E:/Downloads/RISC8b/BTL-LSI-Design/src/Address Mux.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'controller' [E:/Downloads/RISC8b/BTL-LSI-Design/src/controller.sv:23]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/Downloads/RISC8b/BTL-LSI-Design/src/controller.sv:63]
+INFO: [Synth 8-6155] done synthesizing module 'controller' (0#1) [E:/Downloads/RISC8b/BTL-LSI-Design/src/controller.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'bus_control' [E:/Downloads/RISC8b/BTL-LSI-Design/src/bus_control.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'bus_control' (0#1) [E:/Downloads/RISC8b/BTL-LSI-Design/src/bus_control.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'risc_8b' (0#1) [E:/Downloads/RISC8b/BTL-LSI-Design/src/risc_8b.sv:23]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1425.934 ; gain = 575.262
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Handling Custom Attributes
+Finished Synthesize : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1206.527 ; gain = 574.758
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1425.934 ; gain = 575.262
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1425.934 ; gain = 575.262
----------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1425.934 ; gain = 0.000
-INFO: [Project 1-570] Preparing netlist for logic optimization
-
-Processing XDC Constraints
-Initializing timing engine
-Parsing XDC File [E:/Downloads/Arty-Z7-20-Master.xdc]
-WARNING: [Vivado 12-584] No ports matched 'SYS_clk'. [E:/Downloads/Arty-Z7-20-Master.xdc:188]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/Downloads/Arty-Z7-20-Master.xdc:188]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SYS_reset'. [E:/Downloads/Arty-Z7-20-Master.xdc:189]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/Downloads/Arty-Z7-20-Master.xdc:189]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SYS_buttons[1]'. [E:/Downloads/Arty-Z7-20-Master.xdc:190]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/Downloads/Arty-Z7-20-Master.xdc:190]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SYS_buttons[0]'. [E:/Downloads/Arty-Z7-20-Master.xdc:191]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/Downloads/Arty-Z7-20-Master.xdc:191]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'pin[14]'. [E:/Downloads/Arty-Z7-20-Master.xdc:192]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/Downloads/Arty-Z7-20-Master.xdc:192]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'pin[13]'. [E:/Downloads/Arty-Z7-20-Master.xdc:193]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/Downloads/Arty-Z7-20-Master.xdc:193]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'pin[12]'. [E:/Downloads/Arty-Z7-20-Master.xdc:194]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/Downloads/Arty-Z7-20-Master.xdc:194]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'pin[11]'. [E:/Downloads/Arty-Z7-20-Master.xdc:195]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/Downloads/Arty-Z7-20-Master.xdc:195]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'pin[10]'. [E:/Downloads/Arty-Z7-20-Master.xdc:196]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/Downloads/Arty-Z7-20-Master.xdc:196]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'pin[9]'. [E:/Downloads/Arty-Z7-20-Master.xdc:197]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/Downloads/Arty-Z7-20-Master.xdc:197]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'pin[8]'. [E:/Downloads/Arty-Z7-20-Master.xdc:198]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/Downloads/Arty-Z7-20-Master.xdc:198]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'pin[7]'. [E:/Downloads/Arty-Z7-20-Master.xdc:199]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/Downloads/Arty-Z7-20-Master.xdc:199]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'pin[6]'. [E:/Downloads/Arty-Z7-20-Master.xdc:200]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/Downloads/Arty-Z7-20-Master.xdc:200]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'pin[5]'. [E:/Downloads/Arty-Z7-20-Master.xdc:201]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/Downloads/Arty-Z7-20-Master.xdc:201]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'pin[4]'. [E:/Downloads/Arty-Z7-20-Master.xdc:202]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/Downloads/Arty-Z7-20-Master.xdc:202]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SYS_clk'. [E:/Downloads/Arty-Z7-20-Master.xdc:203]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/Downloads/Arty-Z7-20-Master.xdc:203]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SYS_buttons[1]'. [E:/Downloads/Arty-Z7-20-Master.xdc:204]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/Downloads/Arty-Z7-20-Master.xdc:204]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SYS_buttons[0]'. [E:/Downloads/Arty-Z7-20-Master.xdc:205]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/Downloads/Arty-Z7-20-Master.xdc:205]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SYS_reset'. [E:/Downloads/Arty-Z7-20-Master.xdc:206]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/Downloads/Arty-Z7-20-Master.xdc:206]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'pin[14]'. [E:/Downloads/Arty-Z7-20-Master.xdc:207]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/Downloads/Arty-Z7-20-Master.xdc:207]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'pin[13]'. [E:/Downloads/Arty-Z7-20-Master.xdc:208]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/Downloads/Arty-Z7-20-Master.xdc:208]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'pin[12]'. [E:/Downloads/Arty-Z7-20-Master.xdc:209]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/Downloads/Arty-Z7-20-Master.xdc:209]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'pin[11]'. [E:/Downloads/Arty-Z7-20-Master.xdc:210]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/Downloads/Arty-Z7-20-Master.xdc:210]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'pin[10]'. [E:/Downloads/Arty-Z7-20-Master.xdc:211]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/Downloads/Arty-Z7-20-Master.xdc:211]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'pin[9]'. [E:/Downloads/Arty-Z7-20-Master.xdc:212]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/Downloads/Arty-Z7-20-Master.xdc:212]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'pin[8]'. [E:/Downloads/Arty-Z7-20-Master.xdc:213]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/Downloads/Arty-Z7-20-Master.xdc:213]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'pin[7]'. [E:/Downloads/Arty-Z7-20-Master.xdc:214]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/Downloads/Arty-Z7-20-Master.xdc:214]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'pin[6]'. [E:/Downloads/Arty-Z7-20-Master.xdc:215]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/Downloads/Arty-Z7-20-Master.xdc:215]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'pin[5]'. [E:/Downloads/Arty-Z7-20-Master.xdc:216]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/Downloads/Arty-Z7-20-Master.xdc:216]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'pin[4]'. [E:/Downloads/Arty-Z7-20-Master.xdc:217]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/Downloads/Arty-Z7-20-Master.xdc:217]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'e'. [E:/Downloads/Arty-Z7-20-Master.xdc:219]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/Downloads/Arty-Z7-20-Master.xdc:219]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'rs'. [E:/Downloads/Arty-Z7-20-Master.xdc:220]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/Downloads/Arty-Z7-20-Master.xdc:220]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'clk_in'. [E:/Downloads/Arty-Z7-20-Master.xdc:221]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/Downloads/Arty-Z7-20-Master.xdc:221]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'data[7]'. [E:/Downloads/Arty-Z7-20-Master.xdc:222]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/Downloads/Arty-Z7-20-Master.xdc:222]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'data[6]'. [E:/Downloads/Arty-Z7-20-Master.xdc:223]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/Downloads/Arty-Z7-20-Master.xdc:223]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'data[5]'. [E:/Downloads/Arty-Z7-20-Master.xdc:224]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/Downloads/Arty-Z7-20-Master.xdc:224]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'data[4]'. [E:/Downloads/Arty-Z7-20-Master.xdc:225]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/Downloads/Arty-Z7-20-Master.xdc:225]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'data[3]'. [E:/Downloads/Arty-Z7-20-Master.xdc:226]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/Downloads/Arty-Z7-20-Master.xdc:226]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'data[2]'. [E:/Downloads/Arty-Z7-20-Master.xdc:227]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/Downloads/Arty-Z7-20-Master.xdc:227]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'data[1]'. [E:/Downloads/Arty-Z7-20-Master.xdc:228]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/Downloads/Arty-Z7-20-Master.xdc:228]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'data[0]'. [E:/Downloads/Arty-Z7-20-Master.xdc:229]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/Downloads/Arty-Z7-20-Master.xdc:229]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'clk_in'. [E:/Downloads/Arty-Z7-20-Master.xdc:230]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/Downloads/Arty-Z7-20-Master.xdc:230]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'e'. [E:/Downloads/Arty-Z7-20-Master.xdc:231]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/Downloads/Arty-Z7-20-Master.xdc:231]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'rs'. [E:/Downloads/Arty-Z7-20-Master.xdc:232]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/Downloads/Arty-Z7-20-Master.xdc:232]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'data[7]'. [E:/Downloads/Arty-Z7-20-Master.xdc:233]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/Downloads/Arty-Z7-20-Master.xdc:233]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'data[6]'. [E:/Downloads/Arty-Z7-20-Master.xdc:234]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/Downloads/Arty-Z7-20-Master.xdc:234]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'data[5]'. [E:/Downloads/Arty-Z7-20-Master.xdc:235]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/Downloads/Arty-Z7-20-Master.xdc:235]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'data[4]'. [E:/Downloads/Arty-Z7-20-Master.xdc:236]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/Downloads/Arty-Z7-20-Master.xdc:236]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'data[3]'. [E:/Downloads/Arty-Z7-20-Master.xdc:237]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/Downloads/Arty-Z7-20-Master.xdc:237]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'data[2]'. [E:/Downloads/Arty-Z7-20-Master.xdc:238]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/Downloads/Arty-Z7-20-Master.xdc:238]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'data[1]'. [E:/Downloads/Arty-Z7-20-Master.xdc:239]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/Downloads/Arty-Z7-20-Master.xdc:239]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'data[0]'. [E:/Downloads/Arty-Z7-20-Master.xdc:240]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/Downloads/Arty-Z7-20-Master.xdc:240]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-Finished Parsing XDC File [E:/Downloads/Arty-Z7-20-Master.xdc]
-Completed Processing XDC Constraints
-
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1525.109 ; gain = 0.000
-INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
-
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1525.109 ; gain = 0.000
----------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1525.109 ; gain = 674.438
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1206.527 ; gain = 574.758
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-2
+INFO: [Device 21-403] Loading part xc7z020clg400-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1525.109 ; gain = 674.438
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Applying 'set_property' XDC Constraints
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1525.109 ; gain = 674.438
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1206.527 ; gain = 574.758
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'phase_reg' in module 'controller'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
-               INST_ADDR |                              000 |                              000
-              INST_FETCH |                              001 |                              001
-               INST_LOAD |                              010 |                              010
-                    IDLE |                              011 |                              011
-                 OP_ADDR |                              100 |                              100
-                OP_FETCH |                              101 |                              101
-                  ALU_OP |                              110 |                              110
-                   STORE |                              111 |                              111
+                    INIT |                        000000001 |                             0000
+               INST_ADDR |                        000000010 |                             0001
+              INST_FETCH |                        000000100 |                             0010
+               INST_LOAD |                        000001000 |                             0011
+                    IDLE |                        000010000 |                             0100
+                 OP_ADDR |                        000100000 |                             0101
+                OP_FETCH |                        001000000 |                             0110
+                  ALU_OP |                        010000000 |                             0111
+                   STORE |                        100000000 |                             1000
 ---------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'phase_reg' using encoding 'sequential' in module 'controller'
+INFO: [Synth 8-3354] encoded FSM with state register 'phase_reg' using encoding 'one-hot' in module 'controller'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1525.109 ; gain = 674.438
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1206.527 ; gain = 574.758
 ---------------------------------------------------------------------------------
+No constraint files found.
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -299,11 +120,11 @@ Detailed RTL Component Info :
 +---RAMs : 
 	              256 Bit	(32 X 8 bit)          RAMs := 1     
 +---Muxes : 
+	   9 Input    9 Bit        Muxes := 1     
 	   2 Input    5 Bit        Muxes := 2     
-	   8 Input    3 Bit        Muxes := 1     
-	   2 Input    1 Bit        Muxes := 15    
-	   3 Input    1 Bit        Muxes := 1     
-	   8 Input    1 Bit        Muxes := 13    
+	   9 Input    4 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 17    
+	   9 Input    1 Bit        Muxes := 13    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -316,50 +137,46 @@ BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
+No constraint files found.
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1525.109 ; gain = 674.438
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:20 . Memory (MB): peak = 1430.844 ; gain = 799.074
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
 Distributed RAM: Preliminary Mapping Report (see note below)
-+------------+----------------+-----------+----------------------+---------------+
-|Module Name | RTL Object     | Inference | Size (Depth x Width) | Primitives    | 
-+------------+----------------+-----------+----------------------+---------------+
-|risc_8b     | Memory/mem_reg | Implied   | 32 x 8               | RAM32X1S x 8  | 
-+------------+----------------+-----------+----------------------+---------------+
++------------+----------------+-----------+----------------------+-------------+
+|Module Name | RTL Object     | Inference | Size (Depth x Width) | Primitives  | 
++------------+----------------+-----------+----------------------+-------------+
+|risc_8b     | Memory/mem_reg | Implied   | 32 x 8               | RAM32M x 2  | 
++------------+----------------+-----------+----------------------+-------------+
 
 Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Applying XDC Timing Constraints
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1629.652 ; gain = 778.980
----------------------------------------------------------------------------------
+No constraint files found.
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1629.727 ; gain = 779.055
+Finished Timing Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:20 . Memory (MB): peak = 1430.844 ; gain = 799.074
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
 Distributed RAM: Final Mapping Report
-+------------+----------------+-----------+----------------------+---------------+
-|Module Name | RTL Object     | Inference | Size (Depth x Width) | Primitives    | 
-+------------+----------------+-----------+----------------------+---------------+
-|risc_8b     | Memory/mem_reg | Implied   | 32 x 8               | RAM32X1S x 8  | 
-+------------+----------------+-----------+----------------------+---------------+
++------------+----------------+-----------+----------------------+-------------+
+|Module Name | RTL Object     | Inference | Size (Depth x Width) | Primitives  | 
++------------+----------------+-----------+----------------------+-------------+
+|risc_8b     | Memory/mem_reg | Implied   | 32 x 8               | RAM32M x 2  | 
++------------+----------------+-----------+----------------------+-------------+
 
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -368,7 +185,7 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1639.812 ; gain = 789.141
+Finished Technology Mapping : Time (s): cpu = 00:00:10 ; elapsed = 00:00:20 . Memory (MB): peak = 1430.844 ; gain = 799.074
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -386,37 +203,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1855.945 ; gain = 1005.273
+Finished IO Insertion : Time (s): cpu = 00:00:14 ; elapsed = 00:00:23 . Memory (MB): peak = 1627.645 ; gain = 995.875
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1855.945 ; gain = 1005.273
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:14 ; elapsed = 00:00:23 . Memory (MB): peak = 1627.645 ; gain = 995.875
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1855.945 ; gain = 1005.273
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:14 ; elapsed = 00:00:23 . Memory (MB): peak = 1627.645 ; gain = 995.875
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1855.945 ; gain = 1005.273
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:14 ; elapsed = 00:00:23 . Memory (MB): peak = 1627.645 ; gain = 995.875
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1855.945 ; gain = 1005.273
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:23 . Memory (MB): peak = 1627.645 ; gain = 995.875
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1855.945 ; gain = 1005.273
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:14 ; elapsed = 00:00:23 . Memory (MB): peak = 1627.645 ; gain = 995.875
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -429,46 +246,55 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+------+---------+------+
-|      |Cell     |Count |
-+------+---------+------+
-|1     |BUFG     |     1|
-|2     |CARRY4   |     2|
-|3     |LUT1     |     1|
-|4     |LUT2     |    14|
-|5     |LUT3     |    16|
-|6     |LUT4     |     4|
-|7     |LUT5     |     7|
-|8     |LUT6     |    17|
-|9     |RAM32X1S |     8|
-|10    |FDRE     |    51|
-|11    |IBUF     |     2|
-|12    |OBUF     |    14|
-+------+---------+------+
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     2|
+|3     |LUT2   |    20|
+|4     |LUT3   |     5|
+|5     |LUT4   |     8|
+|6     |LUT5   |    11|
+|7     |LUT6   |    15|
+|8     |FDRE   |    46|
+|9     |FDSE   |     1|
+|10    |IBUF   |     2|
+|11    |OBUF   |    14|
++------+-------+------+
+
+Report Instance Areas: 
++------+-------------+----------------+------+
+|      |Instance     |Module          |Cells |
++------+-------------+----------------+------+
+|1     |top          |                |   125|
+|2     |  ALU        |alu             |     2|
+|3     |  Acc        |accumulator     |    17|
+|4     |  Controller |controller      |    66|
+|5     |  PC         |program_counter |    14|
+|6     |  Regis      |Register        |     9|
++------+-------------+----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1855.945 ; gain = 1005.273
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:14 ; elapsed = 00:00:23 . Memory (MB): peak = 1627.645 ; gain = 995.875
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:22 . Memory (MB): peak = 1855.945 ; gain = 906.098
-Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1855.945 ; gain = 1005.273
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:23 . Memory (MB): peak = 1627.645 ; gain = 995.875
+Synthesis Optimization Complete : Time (s): cpu = 00:00:14 ; elapsed = 00:00:23 . Memory (MB): peak = 1627.645 ; gain = 995.875
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1865.062 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 10 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1643.719 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1868.738 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1760.512 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 8 instances were transformed.
-  RAM32X1S => RAM32X1S (RAMS32): 8 instances
+No Unisim elements were transformed.
 
-Synth Design complete | Checksum: 7f5cde1e
+Synth Design complete | Checksum: 460fc43e
 INFO: [Common 17-83] Releasing license: Synthesis
-46 Infos, 56 Warnings, 52 Critical Warnings and 0 Errors encountered.
+50 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 1868.738 ; gain = 1249.406
-INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1868.738 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'E:/VivadoProjects/RISC8b/RISC8b.runs/synth_1/risc_8b.dcp' has been generated.
+synth_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:27 . Memory (MB): peak = 1760.512 ; gain = 1134.973
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1760.512 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'E:/Downloads/RISC8b/BTL-LSI-Design/RISC8b/RISC8b.runs/synth_1/risc_8b.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file risc_8b_utilization_synth.rpt -pb risc_8b_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Mar 20 23:25:09 2025...
+INFO: [Common 17-206] Exiting Vivado at Fri Apr 11 16:52:52 2025...

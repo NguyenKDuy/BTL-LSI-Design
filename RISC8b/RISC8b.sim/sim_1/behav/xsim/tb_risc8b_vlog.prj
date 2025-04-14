@@ -5,6 +5,7 @@ sv xil_defaultlib  \
 "../../../../../src/Register.sv" \
 "../../../../../src/accumulator.sv" \
 "../../../../../src/alu.sv" \
+"../../../../../src/bus_control.sv" \
 "../../../../../src/controller.sv" \
 "../../../../../src/program_counter.sv" \
 "../../../../../src/risc_8b.sv" \
