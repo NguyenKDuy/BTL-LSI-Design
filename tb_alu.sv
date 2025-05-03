@@ -75,13 +75,13 @@ module tb_alu;
         inB = 8'b01101110;
         opcode = 3'b010; #10;
 
-        // Test10: -31.0 + 0.125 ≈ -30.875 (Exp_diff = 7, lose bits => wrong
-        inA = 8'b11111111;
-        inB = 8'b00000000;
+        // Test10: -31.0 + 0.138 ≈ -30.875 (Exp_diff = 7, lose bits => wrong
+        inA = 8'b01111111;
+        inB = 8'b00000001;
         opcode = 3'b010; #10;
 
-        // Test11: -0.125 + -31.0 ≈ -31.125
-        inA = 8'b10000000;
+        // Test11: -0.138 + -31.0 ≈ -31
+        inA = 8'b10000001;
         inB = 8'b11111111;
         opcode = 3'b010; #10;
         $finish;
