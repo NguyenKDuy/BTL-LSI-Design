@@ -86,7 +86,7 @@ module alu(
                         m_tmp = m_tmp >> 1;
                         if (exp_res < 3'b111) begin
                             exp_res = exp_res + 1;
-                        end else begin
+                        end else begin //if overflow
                             overflow_flag = 1'b1; 
                         end
                     end else begin
