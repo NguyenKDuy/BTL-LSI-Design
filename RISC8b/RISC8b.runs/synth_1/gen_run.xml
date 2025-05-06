@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7z020clg400-2" LaunchTime="1744365132" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/risc_8b.dcp">
-  <File Type="PA-TCL" Name="risc_8b.tcl"/>
   <File Type="REPORTS-TCL" Name="risc_8b_reports.tcl"/>
-  <File Type="RDS-RDS" Name="risc_8b.vds"/>
-  <File Type="RDS-PROPCONSTRS" Name="risc_8b_drc_synth.rpt"/>
   <File Type="RDS-UTIL" Name="risc_8b_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="risc_8b_utilization_synth.pb"/>
+  <File Type="PA-TCL" Name="risc_8b.tcl"/>
+  <File Type="RDS-RDS" Name="risc_8b.vds"/>
   <File Type="RDS-DCP" Name="risc_8b.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="risc_8b_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="risc_8b_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/../src/Address Mux.sv">

@@ -98,10 +98,7 @@ module controller(
                                         {sel, rd, ld_ir, halt, inc_pc, ld_ac, ld_pc, wr, data_e} <= 9'b0_0001_0000;
                                         {load, addr_mux} <= 2'b01;
                                 end
-//                                else if (op_out == STO) begin
-//                                        {sel, rd, ld_ir, halt, inc_pc, ld_ac, ld_pc, wr, data_e} <= 9'b0_0001_0000;
-//                                        {load, addr_mux} <= 2'b01;
-//                                end
+
                                 else begin
                                         {sel, rd, ld_ir, halt, inc_pc, ld_ac, ld_pc, wr, data_e} <= 9'b0_0001_0000;
                                         {load, addr_mux} <= 2'b00;
@@ -146,7 +143,7 @@ module controller(
                                 //STO 
                                 else if (op_out == STO) begin
                                                 {sel, rd, ld_ir, halt, inc_pc, ld_ac, ld_pc, wr, data_e} <= 9'b0_0000_0001;
-                                                {load, addr_mux} <= 2'b01;
+                                                {load, addr_mux} <= 2'b00;
                                 end
                                 //Default
                                 else begin
@@ -171,7 +168,7 @@ module controller(
                                 //STO 
                                 else if (op_out == STO) begin
                                                 {sel, rd, ld_ir, halt, inc_pc, ld_ac, ld_pc, wr, data_e} <= 9'b0_0000_0011;
-                                                {load, addr_mux} <= 2'b01;
+                                                {load, addr_mux} <= 2'b00;
                                 end
                                 
                                 //Default

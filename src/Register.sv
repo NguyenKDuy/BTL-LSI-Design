@@ -27,12 +27,8 @@ module Register(
     input  logic [7:0] data_in, // input 8-bit
     output logic [7:0] inB      // ouput 8-bit
 );
-
-//    logic [7:0] reg_buffer;  // Thanh ghi tạm lưu dữ liệu
-
     always @(posedge clk) begin
         if (rst) begin
-//            reg_buffer <= 8'b0;  // Reset thanh ghi về 0
             inB   <= 8'b0;  // Reset đầu ra về 0
         end 
         else begin      //truyền trực tiếp ko dùng buffer
