@@ -1,0 +1,116 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Tue May  6 16:38:05 2025
+# Process ID         : 16496
+# Current directory  : C:/Users/dangq/Downloads/LSI_CPU_RISC8b_EXTEND/LSI_CPU_RISC8b_EXTEND/RISC8b
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent3892 C:\Users\dangq\Downloads\LSI_CPU_RISC8b_EXTEND\LSI_CPU_RISC8b_EXTEND\RISC8b\RISC8b.xpr
+# Log file           : C:/Users/dangq/Downloads/LSI_CPU_RISC8b_EXTEND/LSI_CPU_RISC8b_EXTEND/RISC8b/vivado.log
+# Journal file       : C:/Users/dangq/Downloads/LSI_CPU_RISC8b_EXTEND/LSI_CPU_RISC8b_EXTEND/RISC8b\vivado.jou
+# Running On         : DESKTOP-CP36ASO
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 22631
+# Processor Detail   : 11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz
+# CPU Frequency      : 2419 MHz
+# CPU Physical cores : 4
+# CPU Logical cores  : 8
+# Host memory        : 12594 MB
+# Swap memory        : 8589 MB
+# Total Virtual      : 21184 MB
+# Available Virtual  : 9569 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/dangq/Downloads/LSI_CPU_RISC8b_EXTEND/LSI_CPU_RISC8b_EXTEND/RISC8b/RISC8b.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/dangq/Downloads/BTL-LSI-Design-risc_8b/BTL-LSI-Design-risc_8b/RISC8b' since last save.
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/dangq/Downloads/LSI_CPU_RISC8b_EXTEND/LSI_CPU_RISC8b_EXTEND/RISC8b/RISC8b.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2024.2/data/ip'.
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_risc8b'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/dangq/Downloads/LSI_CPU_RISC8b_EXTEND/LSI_CPU_RISC8b_EXTEND/RISC8b/RISC8b.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'D:/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_risc8b' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/dangq/Downloads/LSI_CPU_RISC8b_EXTEND/LSI_CPU_RISC8b_EXTEND/RISC8b/RISC8b.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -L uvm -prj tb_risc8b_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/dangq/Downloads/LSI_CPU_RISC8b_EXTEND/LSI_CPU_RISC8b_EXTEND/src/Address Mux.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ADD_MUX
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/dangq/Downloads/LSI_CPU_RISC8b_EXTEND/LSI_CPU_RISC8b_EXTEND/src/Memory.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module memory
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/dangq/Downloads/LSI_CPU_RISC8b_EXTEND/LSI_CPU_RISC8b_EXTEND/src/Register.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Register
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/dangq/Downloads/LSI_CPU_RISC8b_EXTEND/LSI_CPU_RISC8b_EXTEND/src/accumulator.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module accumulator
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/dangq/Downloads/LSI_CPU_RISC8b_EXTEND/LSI_CPU_RISC8b_EXTEND/src/alu.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/dangq/Downloads/LSI_CPU_RISC8b_EXTEND/LSI_CPU_RISC8b_EXTEND/src/bus_control.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bus_control
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/dangq/Downloads/LSI_CPU_RISC8b_EXTEND/LSI_CPU_RISC8b_EXTEND/src/controller.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controller
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/dangq/Downloads/LSI_CPU_RISC8b_EXTEND/LSI_CPU_RISC8b_EXTEND/src/program_counter.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module program_counter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/dangq/Downloads/LSI_CPU_RISC8b_EXTEND/LSI_CPU_RISC8b_EXTEND/src/risc_8b.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module risc_8b
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/dangq/Downloads/LSI_CPU_RISC8b_EXTEND/LSI_CPU_RISC8b_EXTEND/RISC8b/RISC8b.srcs/sim_1/new/tb_risc8b.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_risc8b
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/dangq/Downloads/LSI_CPU_RISC8b_EXTEND/LSI_CPU_RISC8b_EXTEND/RISC8b/RISC8b.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/dangq/Downloads/LSI_CPU_RISC8b_EXTEND/LSI_CPU_RISC8b_EXTEND/RISC8b/RISC8b.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_risc8b_behav xil_defaultlib.tb_risc8b xil_defaultlib.glbl -log elaborate.log -L uvm"
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_risc8b_behav xil_defaultlib.tb_risc8b xil_defaultlib.glbl -log elaborate.log -L uvm 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.program_counter
+Compiling module xil_defaultlib.memory_default
+Compiling module xil_defaultlib.Register
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.accumulator
+Compiling module xil_defaultlib.ADD_MUX
+Compiling module xil_defaultlib.controller
+Compiling module xil_defaultlib.bus_control
+Compiling module xil_defaultlib.risc_8b
+Compiling module xil_defaultlib.tb_risc8b
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_risc8b_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/dangq/Downloads/LSI_CPU_RISC8b_EXTEND/LSI_CPU_RISC8b_EXTEND/RISC8b/RISC8b.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_risc8b_behav -key {Behavioral:sim_1:Functional:tb_risc8b} -tclbatch {tb_risc8b.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_risc8b.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_risc8b_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:12 . Memory (MB): peak = 1253.852 ; gain = 12.254

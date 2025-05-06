@@ -1,0 +1,15 @@
+0.7
+2020.2
+Nov  8 2024
+22:36:57
+C:/Users/dangq/Downloads/LSI_CPU_RISC8b_EXTEND/LSI_CPU_RISC8b_EXTEND/RISC8b/RISC8b.sim/sim_1/behav/xsim/glbl.v,1744628183,verilog,,,,glbl,,uvm,,,,,,
+C:/Users/dangq/Downloads/LSI_CPU_RISC8b_EXTEND/LSI_CPU_RISC8b_EXTEND/RISC8b/RISC8b.srcs/sim_1/new/tb_risc8b.sv,1746524173,systemVerilog,,,,tb_risc8b,,uvm,,,,,,
+C:/Users/dangq/Downloads/LSI_CPU_RISC8b_EXTEND/LSI_CPU_RISC8b_EXTEND/src/Address Mux.sv,1744628186,systemVerilog,,C:/Users/dangq/Downloads/LSI_CPU_RISC8b_EXTEND/LSI_CPU_RISC8b_EXTEND/src/Memory.sv,,ADD_MUX,,uvm,,,,,,
+C:/Users/dangq/Downloads/LSI_CPU_RISC8b_EXTEND/LSI_CPU_RISC8b_EXTEND/src/Memory.sv,1744628186,systemVerilog,,C:/Users/dangq/Downloads/LSI_CPU_RISC8b_EXTEND/LSI_CPU_RISC8b_EXTEND/src/Register.sv,,memory,,uvm,,,,,,
+C:/Users/dangq/Downloads/LSI_CPU_RISC8b_EXTEND/LSI_CPU_RISC8b_EXTEND/src/Register.sv,1744628186,systemVerilog,,C:/Users/dangq/Downloads/LSI_CPU_RISC8b_EXTEND/LSI_CPU_RISC8b_EXTEND/src/accumulator.sv,,Register,,uvm,,,,,,
+C:/Users/dangq/Downloads/LSI_CPU_RISC8b_EXTEND/LSI_CPU_RISC8b_EXTEND/src/accumulator.sv,1744628186,systemVerilog,,C:/Users/dangq/Downloads/LSI_CPU_RISC8b_EXTEND/LSI_CPU_RISC8b_EXTEND/src/alu.sv,,accumulator,,uvm,,,,,,
+C:/Users/dangq/Downloads/LSI_CPU_RISC8b_EXTEND/LSI_CPU_RISC8b_EXTEND/src/alu.sv,1746524169,systemVerilog,,C:/Users/dangq/Downloads/LSI_CPU_RISC8b_EXTEND/LSI_CPU_RISC8b_EXTEND/src/bus_control.sv,,alu,,uvm,,,,,,
+C:/Users/dangq/Downloads/LSI_CPU_RISC8b_EXTEND/LSI_CPU_RISC8b_EXTEND/src/bus_control.sv,1744628186,systemVerilog,,C:/Users/dangq/Downloads/LSI_CPU_RISC8b_EXTEND/LSI_CPU_RISC8b_EXTEND/src/controller.sv,,bus_control,,uvm,,,,,,
+C:/Users/dangq/Downloads/LSI_CPU_RISC8b_EXTEND/LSI_CPU_RISC8b_EXTEND/src/controller.sv,1744628186,systemVerilog,,C:/Users/dangq/Downloads/LSI_CPU_RISC8b_EXTEND/LSI_CPU_RISC8b_EXTEND/src/program_counter.sv,,controller,,uvm,,,,,,
+C:/Users/dangq/Downloads/LSI_CPU_RISC8b_EXTEND/LSI_CPU_RISC8b_EXTEND/src/program_counter.sv,1744628186,systemVerilog,,C:/Users/dangq/Downloads/LSI_CPU_RISC8b_EXTEND/LSI_CPU_RISC8b_EXTEND/src/risc_8b.sv,,program_counter,,uvm,,,,,,
+C:/Users/dangq/Downloads/LSI_CPU_RISC8b_EXTEND/LSI_CPU_RISC8b_EXTEND/src/risc_8b.sv,1744628186,systemVerilog,,C:/Users/dangq/Downloads/LSI_CPU_RISC8b_EXTEND/LSI_CPU_RISC8b_EXTEND/RISC8b/RISC8b.srcs/sim_1/new/tb_risc8b.sv,,risc_8b,,uvm,,,,,,

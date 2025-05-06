@@ -1,0 +1,18 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../../src/Address Mux.sv" \
+"../../../../../src/Memory.sv" \
+"../../../../../src/Register.sv" \
+"../../../../../src/accumulator.sv" \
+"../../../../../src/alu.sv" \
+"../../../../../src/bus_control.sv" \
+"../../../../../src/controller.sv" \
+"../../../../../src/program_counter.sv" \
+"../../../../../src/risc_8b.sv" \
+"../../../../RISC8b.srcs/sim_1/new/tb_risc8b.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

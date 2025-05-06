@@ -1,0 +1,40 @@
+/******************************************************************************
+ * Test program
+ * 
+ * Kết quả cần có: Chương trình sau kết thúc (halt) ở lệnh địa chỉ 17(hex)
+ *****************************************************************************/
+
+//opcode_operand  // addr                   assembly code
+//--------------  // ----  -----------------------------------------------
+@00 111_11110     //  00   BEGIN:   JMP TST_JMP		-00	#0 Nhay toi lenh 30
+    000_00000     //  01            HLT        		-01
+    000_00000     //  02            HLT       		-02
+    101_11010     //  03   JMP_OK:  LDA DATA_1		-03	#2 LDA vao inA và inB
+    001_00000     //  04            SKZ			-04	#3 inA = 0 & SKZ => Skip
+    000_00000     //  05            HLT        		-05	# Skip
+    101_11011     //  06            LDA DATA_2		-06	#4 LDA vao inB
+    001_00000     //  07            SKZ			-07	#5 inA = FF & SKZ => Not skip
+    111_01010     //  08            JMP SKZ_OK		-08	#6 
+    000_00000     //  09            HLT        		-09
+    110_11100     //  0A   SKZ_OK:  STO TEMP		-0a	#7 Thay TEMP 0xAA thanh 0xFF   				
+    101_11010     //  0B            LDA DATA_1		-0b	#8 Load DATA1 vao acc
+    110_11100     //  0C            STO TEMP   		-0c	#9 TEMP = 0	
+    101_11100     //  0D            LDA TEMP		-0d	#10 inA = 0 & 
+    001_00000     //  0E            SKZ        		-0e	#11 inA = 0 & SKZ => SKIP
+    000_00000     //  0F            HLT        		-0f			-0F
+    100_11011     //  10            XOR DATA_2		-10	#12 inA = 0xFF, inB = 0x00 => alu_out = 0xFF
+    001_00000     //  11            SKZ  		-11	#13 inA = 0xFF & SKZ => No skip      
+    111_10100     //  12            JMP XOR_OK		-12	#14 
+    000_00000     //  13            HLT        		-13
+    100_11011     //  14   XOR_OK:  XOR DATA_2		-14	#15 inA = 0xFF, inB = 0xFF, alu_out = 0x00
+    001_00000     //  15            SKZ			-15	#16 inA = 0xFF && SKZ => No Skip => Dừng
+    000_00000     //  16            HLT        		-16
+    000_00000     //  17   END:     HLT       		-17			
+    111_00000     //  18            JMP BEGIN  
+
+@1A 00000000      //  1A   DATA_1:             (giá trị hằng 0x00)
+    00110011      //  1B   DATA_2:             (giá trị hằng 0xFF)
+    11101110      //  1C   TEMP:               (biến khởi tạo với giá trị 0xAA)
+
+@1E 111_00011     //  1E   TST_JMP: JMP JMP_OK			#1 Nhay toi lenh so 3
+    000_00000     //  1F            HLT
